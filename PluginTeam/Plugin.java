@@ -1,7 +1,7 @@
 import java.io.IOException;
 
-public class Plugin {
-
+public class Plugin implements PluginInterface
+{
 	int state=-1;
   public String name;
 
@@ -14,12 +14,14 @@ public class Plugin {
   return null;
   }
 
+  @Override
   public void onStart() throws IOException 
   {
 	  Process process = Runtime.getRuntime().exec("cmd /java -jar "+this.name);
 	  this.state=1;
   }
 
+  @Override
   public void onPause() 
   {
 	  if(this.state==1)
@@ -27,14 +29,17 @@ public class Plugin {
 		  	this.state=0;
 		  }
   }
-  public void onResume() 
+  
+  @Override
+  public void onResume()
   {
 	  if(this.state==0)
 	  {
 		  this.state=1;
 	  }
   }
-
+  
+  @Override
   public void onDestroy() 
   {
   }

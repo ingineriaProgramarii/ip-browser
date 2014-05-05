@@ -4,9 +4,7 @@ import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.util.Iterator;
 
-
-
-public class PluginManager extends Plugin
+public class PluginManager
 {
   public String name;
   public File[] plugins;
