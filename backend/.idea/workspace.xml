@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="" />
+    <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="backend.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,6 +25,25 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <method_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/cache/Cache.java" line="60" class="cache.Cache" package="cache">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </method_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -96,14 +117,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Cache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="52" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.41287878" vertical-offset="258" max-vertical-offset="1003">
+            <state line="63" column="0" selection-start="1807" selection-end="1807" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="646">
               <folding>
-                <element signature="method#save#0;class#Cache#0" expanded="true" />
-                <marker date="1399821537018" expanded="true" signature="737:823" placeholder="SELECT * FRO..cookies..." />
+                <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
+                <marker date="1399822510259" expanded="false" signature="675:761" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399822510259" expanded="false" signature="1871:1925" placeholder="DELETE FROM ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryItem.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="5" selection-start="179" selection-end="179" vertical-scroll-proportion="0.47457626" vertical-offset="53" max-vertical-offset="595">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,6 +159,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -243,6 +275,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../browser.db" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
@@ -502,18 +535,22 @@
       <created>1399821607589</created>
       <updated>1399821607589</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="deleteExpiredCookies">
+      <created>1399822909643</created>
+      <updated>1399822909643</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6877000" />
+    <option name="totallyTimeSpent" value="8411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -531,7 +568,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20543806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20543806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -555,7 +592,8 @@
     <MESSAGE value="cookie + database" />
     <MESSAGE value="add cookie" />
     <MESSAGE value="getDomainCookies" />
-    <option name="LAST_COMMIT_MESSAGE" value="getDomainCookies" />
+    <MESSAGE value="deleteExpiredCookies" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleteExpiredCookies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -595,13 +633,28 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="40" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.0469208" vertical-offset="408" max-vertical-offset="12070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="52" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.41287878" vertical-offset="258" max-vertical-offset="1003">
+        <state line="63" column="0" selection-start="1807" selection-end="1807" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="646">
           <folding>
-            <element signature="method#save#0;class#Cache#0" expanded="true" />
-            <marker date="1399821537018" expanded="true" signature="737:823" placeholder="SELECT * FRO..cookies..." />
+            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
+            <marker date="1399822510259" expanded="false" signature="675:761" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399822510259" expanded="false" signature="1871:1925" placeholder="DELETE FROM ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="179" selection-end="179" vertical-scroll-proportion="0.47457626" vertical-offset="53" max-vertical-offset="595">
+          <folding />
         </state>
       </provider>
     </entry>
