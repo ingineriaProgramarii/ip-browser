@@ -13,7 +13,7 @@ import org.jsoup.nodes.Document;
  * @author pispirica
  */
 public class MainClass {
-    public BackEnd backEnd;
+    public static BackEnd backEnd;
 
     public static void main(String[] args) {
         backEnd = BackEnd.getInstance();

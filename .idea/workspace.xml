@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a2b3c1d-936b-4b15-948b-9bc9ac0fde28" name="Default" comment="Adaugat constructor la HistoryItem.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_7_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/cache/Cache.java" afterPath="$PROJECT_DIR$/backend/src/cache/Cache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/MainClass.java" afterPath="$PROJECT_DIR$/backend/src/MainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/backend.iml" afterPath="$PROJECT_DIR$/backend/backend.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ip-browser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +81,10 @@
       <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="44" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="476">
-              <folding />
+            <state line="16" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="493">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,18 +118,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Cache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="44" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.9392265" vertical-offset="1037" max-vertical-offset="1666">
+            <state line="81" column="33" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1513">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addCookie#0;class#Cache#0" expanded="false" />
                 <element signature="method#removeCookie#0;class#Cache#0" expanded="false" />
+                <element signature="method#getDomainCookies#0;class#Cache#0" expanded="false" />
                 <element signature="e#2007#2020#0" expanded="true" />
-                <marker date="1399822595787" expanded="true" signature="841:927" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399823719194" expanded="true" signature="573:659" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399823719194" expanded="true" signature="779:865" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399823719194" expanded="true" signature="3205:3259" placeholder="DELETE FROM ..." />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history" pinned="false" current="true" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -145,7 +162,7 @@
       <file leaf-file-name="HistoryItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="816">
+            <state line="57" column="1" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -174,16 +191,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/MainClass.java" />
         <option value="$PROJECT_DIR$/backend/src/cache/HistoryItem.java" />
         <option value="$PROJECT_DIR$/backend/src/cache/Cache.java" />
+        <option value="$PROJECT_DIR$/backend/src/MainClass.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="width" value="1346" />
-    <option name="height" value="729" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -321,7 +339,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jsoup-1.7.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/browser.db" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -330,23 +348,24 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistory" value="" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="134" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="133" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="163" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="162" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="164" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="163" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="839" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="836" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="157" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="156" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="157" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="156" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="831" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="828" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -541,6 +560,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -590,7 +615,7 @@
       <created>1399816218527</created>
       <updated>1399816218527</updated>
       <workItem from="1399816226706" duration="5868000" />
-      <workItem from="1399822257490" duration="1408000" />
+      <workItem from="1399822257490" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="Adaugat constructor la HistoryItem.">
       <created>1399818407455</created>
@@ -604,10 +629,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7276000" />
+    <option name="totallyTimeSpent" value="7794000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="0" width="1346" height="729" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -615,20 +640,20 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34138486" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34584013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -671,7 +696,9 @@
     <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="44" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,10 +730,12 @@
         <state line="28" column="5" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="629">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addCookie#0;class#Cache#0" expanded="false" />
             <element signature="method#removeCookie#0;class#Cache#0" expanded="false" />
+            <element signature="method#getDomainCookies#0;class#Cache#0" expanded="false" />
             <element signature="e#2007#2020#0" expanded="true" />
-            <marker date="1399822595787" expanded="true" signature="841:927" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="573:659" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="779:865" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="3205:3259" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -772,6 +801,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="493">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="1" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -782,31 +827,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="44" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="44" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.9392265" vertical-offset="1037" max-vertical-offset="1666">
+        <state line="81" column="33" selection-start="2761" selection-end="2761" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1513">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addCookie#0;class#Cache#0" expanded="false" />
             <element signature="method#removeCookie#0;class#Cache#0" expanded="false" />
+            <element signature="method#getDomainCookies#0;class#Cache#0" expanded="false" />
             <element signature="e#2007#2020#0" expanded="true" />
-            <marker date="1399822595787" expanded="true" signature="841:927" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="573:659" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="779:865" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823719194" expanded="true" signature="3205:3259" placeholder="DELETE FROM ..." />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
