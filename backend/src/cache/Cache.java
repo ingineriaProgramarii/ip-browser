@@ -26,7 +26,7 @@ public class Cache {
     public ArrayList<Cookie> getDomainCookies( String domain ) {
         this.cookies = new ArrayList<Cookie>();
         this.dbConnection = Database.getInstance().getConn();
-        String sql = "SELECT * FROM cookies WHERE domain = '" + domain + "';";
+        String sql = "SELECT * FROM cookies WHERE domain = '" + domain + "' AND expireDate < DATETIME('now');";
         java.sql.Statement stmt = null;
         try {
             stmt = dbConnection.createStatement();
