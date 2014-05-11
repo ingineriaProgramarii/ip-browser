@@ -36,6 +36,10 @@ public class HistoryItem {
         return lastAccess;
     }
 
+    public String getDate() {
+        return lastAccess.toString();
+    }
+
     public void setLastAccess( Date lastAccess ) {
         this.lastAccess = lastAccess;
     }

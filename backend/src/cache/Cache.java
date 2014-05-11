@@ -49,9 +49,27 @@ public class Cache {
 
     public Cache() {
         this.dbConnection = Database.getInstance().getConn();
+
+        String sql = "SELECT * FROM history";
+        java.sql.Statement stmt = null;
+        try {
+            stmt = this.dbConnection.createStatement();
+            ResultSet results = stmt.executeQuery( sql );
+            while (results.next()) {
+                String itemName = results.getString("name");
+                String itemUrl = results.getString("url");
+                String itemTag = results.getString("tag");
+                Date itemDate = results.getDate("date");
+                History.add( new HistoryItem( itemName, itemDate, itemUrl, itemTag ) );
+            }
+            results.close();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
     }
 
     public void save() {
+
     }
 
     public void addHistoryItem( String name, String url ) {
@@ -84,7 +102,9 @@ public class Cache {
                 catch( IllegalAccessException e ) {
                     e.printStackTrace();
                 }
-                if( pairs.getValue().equals( result ) ) { filterItems.add( item ); }
+                if( pairs.getValue().toString().toUpperCase().contains(result.toUpperCase()) ) {
+                    filterItems.add( item );
+               }
             }
             it.remove();
         }
