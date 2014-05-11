@@ -3,7 +3,6 @@ package backend;
 import cache.Cache;
 import cache.HistoryItem;
 //import org.w3c.dom.Document;
-import requests.Parser;
 import requests.Requests;
 
 
@@ -20,19 +19,14 @@ public class BackEnd {
 
     private static BackEnd instance = null;
 
-    private Parser parser;
-
     private Requests request;
 
     private Cache cache;
+    
+    private int respCode;
 
-    public Parser getParser() {
-        return parser;
-    }
 
-    /*public void setParser( Parser parser ) {
-        this.parser = parser;
-    }
+   
 
     public Requests getRequest() {
         return request;
@@ -46,12 +40,11 @@ public class BackEnd {
         return cache;
     }
 
-    public void setCache( Cache cache ) {
-        this.cache = cache;
+    public void setRespCode( int code ) {
+        this.respCode = code;
     }
-*/
+
     private BackEnd() {
-        this.parser = new Parser();
         this.request = new Requests();
     }
 
@@ -63,21 +56,21 @@ public class BackEnd {
     }
     
     // functie apelata de cei de la front-end
-    public Document getDOM(String link, String typeRequest, HashMap params) {
-        String htmlResource = new String();
+    public Document getDOM(String link, String typeRequest, HashMap<String, String> params) {
+        //String htmlResource = new String();
         
         request.setType(typeRequest);
         request.setParams(params);
         request.setUrl(link);
-        htmlResource = request.sendRequest();
-        parser.setHtml(htmlResource);
-        parser.parse();
-       // return 
-         Document d = parser.getDoc();
-    //     printXML(d);
-      Elements paragraphs = d.select("p");
-  for(Element p : paragraphs)
-    System.out.println(p.text());
+        //htmlResource = request.sendRequest();
+        Document d = request.sendRequest();
+    //  Document d = parser.getDoc();
+      Elements paragraphs = d.select("script[src]");
+     for(Element p : paragraphs)
+    System.out.println(p.attr("abs:src"));
+     
+     System.out.println("Sursele resureselor externe");
+     request.getResource(d);
          return d;
     }
 

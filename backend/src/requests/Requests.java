@@ -1,5 +1,7 @@
 package requests;
 
+
+import backend.BackEnd;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -11,8 +13,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jsoup.Connection;
+import org.jsoup.Connection.Method;
+import org.jsoup.Connection.Response;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
 
 public class Requests {
 
@@ -20,7 +31,7 @@ public class Requests {
 
     private String USER_AGENT;
 
-    private HashMap params;
+    private HashMap<String, String> params;
     
     private String url;
     
@@ -40,11 +51,11 @@ public class Requests {
         return type;
     }
 
-    public HashMap getParams() {
+    public HashMap<String, String> getParams() {
         return params;
     }
 
-    public void setParams( HashMap params ) {
+    public void setParams( HashMap<String, String> params ) {
         this.params = params;
     }
 
@@ -54,58 +65,61 @@ public class Requests {
         url = new String();
     }
     
+    public void getResource(Document domTree) 
+    {
+       /* Elements links = domTree.select("a[href]");
+        //img si scripturi
+     //   Elements scripts = domTree.select("script[src]"); 
+        Elements media = domTree.select("[src]");
+        Elements imports = domTree.select("link[href]");
+        System.out.println("\nMedia : " + media.size());
+        for (Element src : media)
+        {
+            if(src.tagName().equals("img"))
+                System.out.println(" * " + src.tagName() + ": <" + src.attr("abs:src") + "> " + src.attr("width") +
+                        " * " + src.attr("height")  + " (" + src.attr("alt") + ")");
+            else
+                System.out.println(" * " + src.tagName() + " : <" + src.attr("abs:src") + ">");
+        }
+        System.out.println("\nImports : " + imports.size());
+        for (Element link : imports)
+        {
+            System.out.println(" * " + link.tagName() + ": <" + link.attr("abs:href") + "> " + " (" + link.attr("rel") + ")");
+        }
+        System.out.println("\nLinks : " + links.size());
+        for (Element link : links)
+        {
+            System.out.println(" * a: <" + link.attr("abs:href") + "> " + " (" + link.text() + ")");
+        }
+	*/	
+    }
+    
 
     // HTTP GET request
-    public String sendGet()  {
+    public Document sendGet()  {
 
-        //String url = "http://localhost/test.php";
-
-        URL obj;
-        String html = new String();
+        Document domTree = null;
         try {
-            obj = new URL( this.url );
-            HttpURLConnection con = ( HttpURLConnection ) obj.openConnection();
-
-            // optional default is GET
-            con.setRequestMethod( "GET" );
-            con.setDoOutput(true);
-            //add request header
-            con.setRequestProperty( "User-Agent", USER_AGENT );
-
-            int responseCode = con.getResponseCode();
-           // System.out.println( "\nSending 'GET' request to URL : " + url );
-           System.out.println( "Response Code : " + responseCode );
-
-            /*BufferedReader in = new BufferedReader(
-                    new InputStreamReader( con.getInputStream() ) );
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while( ( inputLine = in.readLine() ) != null ) {
-                response.append( inputLine );
-            }
-            in.close(); */
-
-            String line;
-            StringBuilder builder = new StringBuilder();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-                builder.append("\n"); 
-            }
-            html = builder.toString();
-            reader.close();
-        } catch (MalformedURLException ex) {
-            System.out.println("Exceptie la crearea url-ului");
-            System.out.println(ex.getMessage());
-        } catch (IOException ex) {
-            System.out.println("Exceptie la sendGet");
-            System.out.println(ex.getMessage());
+            Response res = Jsoup.connect(this.url).method(Method.GET).execute();
+            int code = res.statusCode();
             
+            System.out.println("Headers: " + res.headers());
+            System.out.println("Response code: " + code);
+            
+            if (code == 200)
+            {
+                BackEnd.getInstance().setRespCode(code);
+                domTree = res.parse();
+            }
+            else
+            {
+                BackEnd.getInstance().setRespCode(code);
+            }
+            
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
-        
-       // System.out.println(html);
-        return html;
+        return domTree;
         
 
         //print result
@@ -119,64 +133,27 @@ public class Requests {
     }
 
     // HTTP POST request
-    private String sendPost() throws Exception {
+    public Document sendPost() throws Exception {
 
-        //String url = "https://selfsolve.apple.com/wcResults.do";
-        URL obj = new URL( this.url );
-        HttpsURLConnection con = ( HttpsURLConnection ) obj.openConnection();
+        HashMap<String, String> postParams = new HashMap<>();
+        Document domTree = Jsoup.connect(this.url)
+        .data(this.params)
+        .post();
+        System.out.println(domTree);
+        return domTree;
 
-        //add reuqest header
-        con.setRequestMethod( "POST" );
-        con.setRequestProperty( "User-Agent", USER_AGENT );
-        con.setRequestProperty( "Accept-Language", "en-US,en;q=0.5" );
-
-        String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
-
-        // Send post request
-        con.setDoOutput( true );
-        DataOutputStream wr = new DataOutputStream( con.getOutputStream() );
-        wr.writeBytes( urlParameters );
-        wr.flush();
-        wr.close();
-
-        /*int responseCode = con.getResponseCode();
-        //System.out.println( "\nSending 'POST' request to URL : " + url );
-        //System.out.println( "Post parameters : " + urlParameters );
-        //System.out.println( "Response Code : " + responseCode );
-
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader( con.getInputStream() ) );
-        String inputLine;
-        StringBuffer response = new StringBuffer();
-
-        while( ( inputLine = in.readLine() ) != null ) {
-            response.append( inputLine );
-        }
-        in.close();*/
-        String line;
-        StringBuilder builder = new StringBuilder();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        while ((line = reader.readLine()) != null) {
-            builder.append(line);
-            builder.append("\n"); 
-        }
-        String html = builder.toString();
-        reader.close();
-        return html;
-
-        //print result
-        //System.out.println( response.toString() );
 
     }
     
-    public String sendRequest() {
+    public Document sendRequest() {
         
-        String requestResponse = new String();
+        //String requestResponse = new String();
+        Document domTree = null;
         
         if (type.compareTo("GET") == 0)
         {
             try {
-                requestResponse = this.sendGet();
+                domTree = this.sendGet();
             } catch (Exception ex) {
                 ex.getMessage();
             }
@@ -185,14 +162,14 @@ public class Requests {
             if (type.compareTo("POST") == 0)
             {
                 try {
-                    requestResponse = this.sendPost();
+                    domTree = this.sendPost();
                 } catch (Exception ex) {
                     ex.getMessage();
                 }
             }
              else
                  System.out.println("Metoda invalida");
-        return requestResponse;
+        return domTree;
     }
 
 }
