@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../browser.db" afterPath="$PROJECT_DIR$/../browser.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cache/Cache.java" afterPath="$PROJECT_DIR$/src/cache/Cache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backend.iws" />
@@ -95,13 +98,16 @@
       <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.77840906" vertical-offset="762" max-vertical-offset="1309">
+            <state line="113" column="37" selection-start="3824" selection-end="3824" vertical-scroll-proportion="0.51704544" vertical-offset="322" max-vertical-offset="884">
               <folding>
-                <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
                 <element signature="e#1934#1947#0" expanded="true" />
-                <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
-                <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
-                <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+                <marker date="1399827996161" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399827996161" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+                <marker date="1399827996161" expanded="true" signature="3533:3567" placeholder="SELECT FROM cache..." />
+                <marker date="1399827996161" expanded="true" signature="3533:3590" placeholder="SELECT FROM cache..." />
+                <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+                <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+                <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
               </folding>
             </state>
           </provider>
@@ -543,18 +549,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9781000" />
+    <option name="totallyTimeSpent" value="11974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -619,11 +625,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1122">
           <folding>
-            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
             <element signature="e#1934#1947#0" expanded="true" />
-            <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
-            <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
-            <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+            <marker date="1399827996161" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399827996161" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3567" placeholder="SELECT FROM cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3590" placeholder="SELECT FROM cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
           </folding>
         </state>
       </provider>
@@ -702,13 +711,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.77840906" vertical-offset="762" max-vertical-offset="1309">
+        <state line="113" column="37" selection-start="3824" selection-end="3824" vertical-scroll-proportion="0.51704544" vertical-offset="322" max-vertical-offset="884">
           <folding>
-            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
             <element signature="e#1934#1947#0" expanded="true" />
-            <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
-            <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
-            <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+            <marker date="1399827996161" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399827996161" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3567" placeholder="SELECT FROM cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3590" placeholder="SELECT FROM cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
+            <marker date="1399827996161" expanded="true" signature="3533:3587" placeholder="SELECT path ..cache..." />
           </folding>
         </state>
       </provider>

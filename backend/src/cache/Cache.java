@@ -124,4 +124,21 @@ public class Cache {
         }
     }
 
+    public String getCacheItem( String url ) {
+        String sql = "SELECT path FROM cache WHERE url='" + url + "' LIMIT 1;";
+        String path = null;
+        java.sql.Statement stmt = null;
+        try {
+            stmt = this.dbConnection.createStatement();
+            ResultSet results = stmt.executeQuery( sql );
+            while( results.next() ) {
+                path = results.getString( "path" );
+            }
+            results.close();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();
+        }
+        return path;
+    }
 }
