@@ -25,7 +25,6 @@ public class Cache {
 
     public ArrayList<Cookie> getDomainCookies( String domain ) {
         this.cookies = new ArrayList<Cookie>();
-        this.dbConnection = Database.getInstance().getConn();
         String sql = "SELECT * FROM cookies WHERE domain = '" + domain + "' AND expireDate < DATETIME('now');";
         java.sql.Statement stmt = null;
         try {
@@ -50,6 +49,7 @@ public class Cache {
     }
 
     public Cache() {
+        this.dbConnection = Database.getInstance().getConn();
     }
 
     public void save() {
@@ -60,6 +60,19 @@ public class Cache {
 
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
         return null;
+    }
+
+    public void deleteExpiredCookies() {
+        String sql = "DELETE FROM cookies WHERE expireDate < DATETIME('now')";
+        java.sql.Statement stmt = null;
+        try {
+            stmt = this.dbConnection.createStatement();
+            ResultSet results = stmt.executeQuery( sql );
+            results.close();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();
+        }
     }
 
 }
