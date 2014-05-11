@@ -9,13 +9,16 @@ public class HistoryItem {
 
     private String url;
 
+    private String tag;
+
     public HistoryItem() {
     }
 
-    public HistoryItem(String _name, Date _lastAccess, String _url) {
+    public HistoryItem(String _name, Date _lastAccess, String _url, String _tag) {
         name = _name;
         lastAccess = _lastAccess;
         url = _url;
+        tag = _tag;
     }
 
     public void delete() {
@@ -43,5 +46,13 @@ public class HistoryItem {
 
     public void setUrl( String url ) {
         this.url = url;
+    }
+
+    public void setTag( String _tag) {
+        tag = _tag;
+    }
+
+    public String getTag() {
+        return tag;
     }
 }
