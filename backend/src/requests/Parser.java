@@ -1,6 +1,8 @@
 package requests;
 
-import org.w3c.dom.Document;
+//import org.w3c.dom.Document;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
 
 public class Parser {
 
@@ -24,13 +26,8 @@ public class Parser {
         this.html = html;
     }
 
-    public Document getDOM() {
-        return null;
+    public void parse() {
+        doc =  Jsoup.parse(html);
     }
 
-    public void parse( String HTML ) {
-    }
-
-    public Parser() {
-    }
 }
