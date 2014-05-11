@@ -87,7 +87,7 @@ public class Cookie {
         this.secure = secure;
     }
 
-    public void add() {
+    public void insert() {
         String sql = "INSERT INTO cookies( domain, name, value, expireDate, path, secure ) " +
                      "VALUES( '" +
                      this.domain + "', '" +
