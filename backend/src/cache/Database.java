@@ -22,11 +22,14 @@ public class Database {
         }
     }
 
-    public Database getInstance() {
+    public static Database getInstance() {
         if( instance == null ) {
             instance = new Database();
         }
         return instance;
     }
 
+    public Connection getConn() {
+        return this.conn;
+    }
 }
