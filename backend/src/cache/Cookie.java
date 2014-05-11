@@ -1,6 +1,7 @@
 package cache;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class Cookie {
@@ -87,10 +88,22 @@ public class Cookie {
     }
 
     public void add() {
-        String sql = "INSERT INTO cookies( domain, name, value, expire, path, secure ) " +
+        String sql = "INSERT INTO cookies( domain, name, value, expireDate, path, secure ) " +
                      "VALUES( '" +
-                     this.domain+ "', " +
+                     this.domain + "', '" +
+                     this.name + "','" +
+                     this.value + "'," +
+                     this.expireDate + ",'" +
+                     this.path + "'," +
+                     this.secure +
                      " )";
+        try {
+            java.sql.Statement st = this.dbConnection.createStatement();
+            st.executeUpdate( sql );
+            this.dbConnection.commit();
+        }
+        catch( SQLException e ) {
+            System.out.println( e.getMessage() );
+        }
     }
-
 }
