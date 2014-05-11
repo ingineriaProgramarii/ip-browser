@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a2b3c1d-936b-4b15-948b-9bc9ac0fde28" name="Default" comment="Adaugat constructor la HistoryItem.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/browser.db" afterPath="$PROJECT_DIR$/browser.db" />
     </list>
     <ignored path="ip-browser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -631,7 +631,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8148000" />
+    <option name="totallyTimeSpent" value="8155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
