@@ -4,6 +4,7 @@
     <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_7_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cache/Cache.java" afterPath="$PROJECT_DIR$/src/cache/Cache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainClass.java" afterPath="$PROJECT_DIR$/src/MainClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend.iml" afterPath="$PROJECT_DIR$/backend.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -96,24 +97,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="13" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="747" max-vertical-offset="1275">
+            <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="1.3844697" vertical-offset="0" max-vertical-offset="1122">
               <folding>
-                <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
-                <element signature="e#2007#2020#0" expanded="true" />
-                <marker date="1399823760069" expanded="true" signature="779:865" placeholder="SELECT * FRO..cookies..." />
-                <marker date="1399823760069" expanded="true" signature="3205:3259" placeholder="DELETE FROM ..." />
+                <element signature="e#1934#1947#0" expanded="true" />
+                <marker date="1399823900889" expanded="false" signature="702:788" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399823900889" expanded="false" signature="3116:3170" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainClass.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="327" selection-end="327" vertical-scroll-proportion="0.45075756" vertical-offset="0" max-vertical-offset="528">
+            <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#MainClass#0" expanded="true" />
@@ -150,8 +150,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/cache/Database.java" />
         <option value="$PROJECT_DIR$/src/cache/Cookie.java" />
-        <option value="$PROJECT_DIR$/src/cache/Cache.java" />
         <option value="$PROJECT_DIR$/src/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/cache/Cache.java" />
       </list>
     </option>
   </component>
@@ -548,7 +548,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8999000" />
+    <option name="totallyTimeSpent" value="9371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
@@ -654,24 +654,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
+    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="13" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="1938">
+        <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding>
-            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
-            <element signature="e#2007#2020#0" expanded="true" />
-            <marker date="1399823760069" expanded="true" signature="779:865" placeholder="SELECT * FRO..cookies..." />
-            <marker date="1399823760069" expanded="true" signature="3205:3259" placeholder="DELETE FROM ..." />
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#MainClass#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="327" selection-end="327" vertical-scroll-proportion="0.45075756" vertical-offset="0" max-vertical-offset="528">
+        <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="1.3844697" vertical-offset="0" max-vertical-offset="1122">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#MainClass#0" expanded="true" />
+            <element signature="e#1934#1947#0" expanded="true" />
+            <marker date="1399823900889" expanded="false" signature="702:788" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399823900889" expanded="false" signature="3116:3170" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
