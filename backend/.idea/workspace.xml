@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../browser.db" afterPath="$PROJECT_DIR$/../browser.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend.iml" afterPath="$PROJECT_DIR$/backend.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,9 +95,11 @@
       <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="21" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.10227273" vertical-offset="558" max-vertical-offset="1122">
+            <state line="105" column="0" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.77840906" vertical-offset="762" max-vertical-offset="1309">
               <folding>
+                <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
                 <element signature="e#1934#1947#0" expanded="true" />
+                <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
                 <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
                 <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
               </folding>
@@ -511,7 +513,7 @@
       <created>1399814671862</created>
       <updated>1399814671862</updated>
       <workItem from="1399814658382" duration="2024000" />
-      <workItem from="1399824362175" duration="45000" />
+      <workItem from="1399824362175" duration="410000" />
     </task>
     <task id="LOCAL-00001" summary="cookie + database">
       <created>1399817731983</created>
@@ -541,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9416000" />
+    <option name="totallyTimeSpent" value="9781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
@@ -617,7 +619,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1122">
           <folding>
+            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
             <element signature="e#1934#1947#0" expanded="true" />
+            <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
             <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
             <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
           </folding>
@@ -698,9 +702,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="21" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.10227273" vertical-offset="558" max-vertical-offset="1122">
+        <state line="105" column="0" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.77840906" vertical-offset="762" max-vertical-offset="1309">
           <folding>
+            <element signature="method#getHistory#0;class#Cache#0" expanded="true" />
             <element signature="e#1934#1947#0" expanded="true" />
+            <element signature="method#deleteExpiredCookies#0;class#Cache#0" expanded="true" />
             <marker date="1399824283821" expanded="true" signature="702:788" placeholder="SELECT * FRO..cookies..." />
             <marker date="1399824283821" expanded="true" signature="3116:3170" placeholder="DELETE FROM ..." />
           </folding>
