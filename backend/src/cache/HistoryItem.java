@@ -1,17 +1,21 @@
 package cache;
-
-
 import java.util.Date;
 
 public class HistoryItem {
 
-    public String name;
+    private String name;
 
-    public Date lastAccess;
+    private Date lastAccess;
 
-    public String url;
+    private String url;
 
     public HistoryItem() {
+    }
+
+    public HistoryItem(String _name, Date _lastAccess, String _url) {
+        name = _name;
+        lastAccess = _lastAccess;
+        url = _url;
     }
 
     public void delete() {
