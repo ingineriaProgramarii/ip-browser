@@ -134,7 +134,7 @@
       <file leaf-file-name="HistoryItem.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.7504621" vertical-offset="53" max-vertical-offset="595">
+            <state line="14" column="5" selection-start="179" selection-end="179" vertical-scroll-proportion="0.31053606" vertical-offset="53" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
@@ -539,7 +539,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7874000" />
+    <option name="totallyTimeSpent" value="8005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
@@ -648,7 +648,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.7504621" vertical-offset="53" max-vertical-offset="595">
+        <state line="14" column="5" selection-start="179" selection-end="179" vertical-scroll-proportion="0.31053606" vertical-offset="53" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
