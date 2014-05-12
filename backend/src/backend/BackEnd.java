@@ -2,18 +2,17 @@ package backend;
 
 import cache.Cache;
 import cache.HistoryItem;
-//import org.w3c.dom.Document;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import requests.Requests;
 
-
+import javax.lang.model.element.Element;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+//import org.w3c.dom.Document;
 //import org.w3c.dom.Node;
 //import org.w3c.dom.NodeList;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
 
 public class BackEnd {
 
@@ -22,11 +21,9 @@ public class BackEnd {
     private Requests request;
 
     private Cache cache;
-    
+
     private int respCode;
 
-
-   
 
     public Requests getRequest() {
         return request;
@@ -54,24 +51,21 @@ public class BackEnd {
         }
         return instance;
     }
-    
+
     // functie apelata de cei de la front-end
-    public Document getDOM(String link, String typeRequest, HashMap<String, String> params) {
+    public Document getDOM( String link, String typeRequest, HashMap<String, String> params ) {
         //String htmlResource = new String();
-        
-        request.setType(typeRequest);
-        request.setParams(params);
-        request.setUrl(link);
+
+        request.setType( typeRequest );
+        request.setParams( params );
+        request.setUrl( link );
         //htmlResource = request.sendRequest();
         Document d = request.sendRequest();
-    //  Document d = parser.getDoc();
-      Elements paragraphs = d.select("script[src]");
-     for(Element p : paragraphs)
-    System.out.println(p.attr("abs:src"));
-     
-     System.out.println("Sursele resureselor externe");
-     request.getResource(d);
-         return d;
+         // Document d = parser.getDoc();
+        Elements paragraphs = d.select( "script[src]" );
+        for( org.jsoup.nodes.Element p : paragraphs ) { System.out.println( p.attr( "abs:src" ) ); }
+
+        return d;
     }
 
   /*  public Boolean makeRequest( String type, String url, String params ) {

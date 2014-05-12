@@ -10,7 +10,7 @@ public class Database {
     private Database() {
         try {
             Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection("jdbc:sqlite:test.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:src/cache/browser.db");
         }
         catch( Exception e ) {
             e.printStackTrace();

@@ -13,7 +13,7 @@ public class Cookie {
 
     private String value;
 
-    private Date expireDate;
+    private String expireDate;
 
     private String path;
 
@@ -24,7 +24,7 @@ public class Cookie {
         this.setConnection();
     }
 
-    public Cookie( String domain, String name, String value, Date expireDate, String path, Boolean secure ) {
+    public Cookie( String domain, String name, String value, String expireDate, String path, Boolean secure ) {
         this.domain = domain;
         this.name = name;
         this.path = path;
@@ -66,7 +66,7 @@ public class Cookie {
         return value;
     }
 
-    public Date getExpireDate() {
+    public String getExpireDate() {
         return expireDate;
     }
 
@@ -90,7 +90,7 @@ public class Cookie {
         this.value = value;
     }
 
-    public void setExpireDate( Date expireDate ) {
+    public void setExpireDate( String expireDate ) {
         this.expireDate = expireDate;
     }
 

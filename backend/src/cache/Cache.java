@@ -5,6 +5,8 @@ import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Cache {
@@ -15,42 +17,63 @@ public class Cache {
 
     private Connection dbConnection;
 
-    public void addCookie( String name, String domain, String value, Date expireDate, String path, Boolean secure ) {
+    public void addCookie( String name, String domain, String value, String expireDate, String path, Boolean secure ) {
         Cookie c = new Cookie( domain, name, value, expireDate, path, secure );
-        c.save();
         if( this.cookies == null ) {
-            this.cookies = new ArrayList<Cookie>();
+            this.cookies = new ArrayList<>();
         }
         this.cookies.add( c );
     }
 
-    public ArrayList<Cookie> getDomainCookies( String domain ) {
+    public void addCookie( Cookie c ) {
+        this.cookies.add( c );
+    }
+
+    public void loadCookies() {
         this.cookies = new ArrayList<Cookie>();
-        String sql = "SELECT * FROM cookies WHERE domain = '" + domain + "' AND expireDate < DATETIME('now');";
+        String sql = "SELECT * FROM cookies;";
         java.sql.Statement stmt = null;
         try {
             stmt = dbConnection.createStatement();
             ResultSet results = stmt.executeQuery( sql );
             while( results.next() ) {
-                cookies.add( new Cookie(
-                        domain,
+                this.cookies.add( new Cookie(
+                        results.getString( "domain" ),
                         results.getString( "name" ),
                         results.getString( "value" ),
-                        results.getDate( "expireDate" ),
+                        results.getString( "expireDate" ),
                         results.getString( "path" ),
                         results.getBoolean( "secure" ) )
-                           );
+                                );
             }
             results.close();
         }
         catch( SQLException e ) {
             e.printStackTrace();
         }
-        return this.cookies;
+    }
+
+    public void saveCookies() {
+        Date now = new Date();
+        for( Cookie c : this.cookies ) {
+            try {
+                Date cookieDate = new SimpleDateFormat( "yyyy-MM-d HH:mm:ss" ).parse( c.getExpireDate() );
+                if( now.compareTo( cookieDate ) < 0 ) {
+                    c.save();
+                }
+            }
+            catch( ParseException e ) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public Cache() {
         this.dbConnection = Database.getInstance().getConn();
+        this.History = new ArrayList<>();
+        this.cookies = new ArrayList<>();
+
+        this.loadCookies();
 
         String sql = "SELECT * FROM history";
         java.sql.Statement stmt = null;
@@ -139,5 +162,26 @@ public class Cache {
             e.printStackTrace();
         }
         return path;
+    }
+
+    public String getDomainCookies( String domain, String path, Boolean https ) {
+        String cookies = "";
+        Date now = new Date();
+        for( Cookie c : this.cookies ) {
+            if( c.getDomain() == domain && c.getPath() == path ) {
+                if( https || ( !https && !c.getSecure() ) ) {
+                    try {
+                        Date cookieDate = new SimpleDateFormat( "yyyy-MM-d HH:mm:ss" ).parse( c.getExpireDate() );
+                        if( now.compareTo( cookieDate ) < 0 ) {
+                            cookies += c.getName() + "=" + c.getValue() + ";";
+                        }
+                    }
+                    catch( ParseException e ) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return cookies;
     }
 }

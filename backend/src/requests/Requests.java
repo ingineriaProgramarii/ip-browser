@@ -1,29 +1,17 @@
 package requests;
 
 
-import backend.BackEnd;
-import javax.net.ssl.HttpsURLConnection;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.jsoup.Connection;
-import org.jsoup.Connection.Method;
-import org.jsoup.Connection.Response;
+import cache.Cache;
+import cache.Cookie;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.*;
+import java.util.HashMap;
+import java.util.List;
 
 public class Requests {
 
@@ -32,13 +20,15 @@ public class Requests {
     private String USER_AGENT;
 
     private HashMap<String, String> params;
-    
+
     private String url;
-    
-    public void setUrl(String link) {
+
+    private Cache cache;
+
+    public void setUrl( String link ) {
         this.url = link;
     }
-    
+
     public String getUrl() {
         return this.url;
     }
@@ -63,10 +53,10 @@ public class Requests {
         type = new String();
         params = new HashMap();
         url = new String();
+        this.cache = new Cache();
     }
-    
-    public void getResource(Document domTree) 
-    {
+
+    public void getResource( Document domTree ) {
        /* Elements links = domTree.select("a[href]");
         //img si scripturi
      //   Elements scripts = domTree.select("script[src]"); 
@@ -91,85 +81,138 @@ public class Requests {
         {
             System.out.println(" * a: <" + link.attr("abs:href") + "> " + " (" + link.text() + ")");
         }
-	*/	
+	*/
     }
-    
+
+    public void getCookies( List<String> headers ) {
+        for( String cookie : headers ) {
+            String[] sc = cookie.split( ";" );
+            Cookie c = new Cookie();
+            String[] nameValue = sc[0].split( "=", 1 );
+            c.setName( nameValue[0].trim() );
+            c.setValue( nameValue[1].trim() );
+            c.setSecure( false );
+            for( int i = 1; i < sc.length; i++ ) {
+                if( sc[i].trim().toLowerCase() == "secure" ) {
+                    c.setSecure( true );
+                }
+                else if( sc[i].contains( "=" ) ) {
+                    nameValue = sc[i].split( "=", 1 );
+                    String key = nameValue[0].trim();
+                    String value = nameValue[1].trim();
+                    switch( key.toLowerCase() ) {
+                        case "path":
+                            c.setPath( value );
+                            break;
+                        case "domain":
+                            c.setDomain( value );
+                            break;
+                        case "expires":
+                            c.setExpireDate( value );
+                            break;
+                    }
+                }
+            }
+            this.cache.addCookie( c );
+        }
+    }
 
     // HTTP GET request
-    public Document sendGet()  {
+    public Document sendGet() {
 
+        URL obj = null;
         Document domTree = null;
         try {
-            Response res = Jsoup.connect(this.url).method(Method.GET).execute();
-            int code = res.statusCode();
-            
-            System.out.println("Headers: " + res.headers());
-            System.out.println("Response code: " + code);
-            
-            if (code == 200)
-            {
-                BackEnd.getInstance().setRespCode(code);
-                domTree = res.parse();
+            obj = new URL( this.url );
+
+            HttpURLConnection con = ( HttpURLConnection ) obj.openConnection();
+
+            // optional default is GET
+            con.setRequestMethod( "GET" );
+
+            //add request header
+            con.setRequestProperty( "User-Agent", this.USER_AGENT );
+            con.setRequestProperty( "Cookie", this.cache.getDomainCookies( this.getDomainName( this.url ), obj.getPath(), url
+                    .startsWith( "https" ) ) );
+
+            int responseCode = con.getResponseCode();
+            System.out.println( "\nSending 'GET' request to URL : " + url );
+            System.out.println( "Response Code : " + responseCode );
+
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader( con.getInputStream() ) );
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while( ( inputLine = in.readLine() ) != null ) {
+                response.append( inputLine );
             }
-            else
-            {
-                BackEnd.getInstance().setRespCode(code);
-            }
-            
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+
+            this.getCookies( con.getHeaderFields().get( "Set-Cookie" ) );
+            domTree = Jsoup.parse( response.toString() );
+            in.close();
+            System.out.println( "domTree:" );
+            System.out.println( domTree );
+            return domTree;
         }
-        return domTree;
-        
-
-        //print result
-        //System.out.println( response.toString() );
-      /*  List<String> cookies = con.getHeaderFields().get( "Set-Cookie" );
-
-        System.out.println( cookies.get( 0 ).toString() );
-        System.out.println( cookies.get( 1 ).toString() );
-        System.out.println( con.getContentType() ); */
-
+        catch( MalformedURLException e ) {
+            e.printStackTrace();
+            return domTree;
+        }
+        catch( IOException e ) {
+            e.printStackTrace();
+            return domTree;
+        }
     }
 
     // HTTP POST request
     public Document sendPost() throws Exception {
 
-        HashMap<String, String> postParams = new HashMap<>();
-        Document domTree = Jsoup.connect(this.url)
-        .data(this.params)
-        .post();
-        System.out.println(domTree);
+        HashMap<String, String> postParams = new HashMap<String, String>();
+        Document domTree = Jsoup.connect( this.url )
+                                .data( this.params )
+                                .post();
+        System.out.println( domTree );
         return domTree;
 
-
     }
-    
+
     public Document sendRequest() {
-        
+
         //String requestResponse = new String();
         Document domTree = null;
-        
-        if (type.compareTo("GET") == 0)
-        {
+
+        if( type.compareTo( "GET" ) == 0 ) {
             try {
                 domTree = this.sendGet();
-            } catch (Exception ex) {
+            }
+            catch( Exception ex ) {
                 ex.getMessage();
             }
         }
-        else
-            if (type.compareTo("POST") == 0)
-            {
-                try {
-                    domTree = this.sendPost();
-                } catch (Exception ex) {
-                    ex.getMessage();
-                }
+        else if( type.compareTo( "POST" ) == 0 ) {
+            try {
+                domTree = this.sendPost();
             }
-             else
-                 System.out.println("Metoda invalida");
+            catch( Exception ex ) {
+                ex.getMessage();
+            }
+        }
+        else { System.out.println( "Metoda invalida" ); }
         return domTree;
+    }
+
+    public String getDomainName( String url ) {
+        URI uri = null;
+        try {
+            uri = new URI( url );
+            String domain = uri.getHost();
+            return domain.startsWith( "www." ) ? domain.substring( 4 ) : domain;
+        }
+        catch( URISyntaxException e ) {
+            e.printStackTrace();
+            return "";
+        }
     }
 
 }
