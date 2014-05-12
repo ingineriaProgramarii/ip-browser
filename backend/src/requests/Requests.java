@@ -88,7 +88,7 @@ public class Requests {
         for( String cookie : headers ) {
             String[] sc = cookie.split( ";" );
             Cookie c = new Cookie();
-            String[] nameValue = sc[0].split( "=", 1 );
+            String[] nameValue = sc[0].split( "=", 2 );
             c.setName( nameValue[0].trim() );
             c.setValue( nameValue[1].trim() );
             c.setSecure( false );
@@ -97,7 +97,7 @@ public class Requests {
                     c.setSecure( true );
                 }
                 else if( sc[i].contains( "=" ) ) {
-                    nameValue = sc[i].split( "=", 1 );
+                    nameValue = sc[i].split( "=", 2 );
                     String key = nameValue[0].trim();
                     String value = nameValue[1].trim();
                     switch( key.toLowerCase() ) {
@@ -134,7 +134,7 @@ public class Requests {
             con.setRequestProperty( "User-Agent", this.USER_AGENT );
             con.setRequestProperty( "Cookie", this.cache.getDomainCookies( this.getDomainName( this.url ), obj.getPath(), url
                     .startsWith( "https" ) ) );
-
+            con.connect();
             int responseCode = con.getResponseCode();
             System.out.println( "\nSending 'GET' request to URL : " + url );
             System.out.println( "Response Code : " + responseCode );
@@ -148,10 +148,11 @@ public class Requests {
                 response.append( inputLine );
             }
 
+            System.out.println( con.getHeaderFields() );
+
             this.getCookies( con.getHeaderFields().get( "Set-Cookie" ) );
             domTree = Jsoup.parse( response.toString() );
             in.close();
-            System.out.println( "domTree:" );
             System.out.println( domTree );
             return domTree;
         }
