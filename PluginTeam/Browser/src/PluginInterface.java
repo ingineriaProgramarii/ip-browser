@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public interface PluginInterface //strategy pattern
 {
 	public void onStart() throws IOException;
@@ -5,3 +7,4 @@ public interface PluginInterface //strategy pattern
 	public void onDestroy();
 	public void onResume();
 }
+
