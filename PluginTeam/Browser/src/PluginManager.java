@@ -1,10 +1,18 @@
 import java.util.Vector;
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Iterator;
 
-public class PluginManager
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+import audioplayer.AudioPlayer; 
+
+
+public class PluginManager extends Plugin
 {
   public String name;
   public File[] plugins;
@@ -13,13 +21,17 @@ public class PluginManager
   public String[] namesPlugin = null;
     /**
    * 
-   * @element-type Plugin
+   * @throws InterruptedException 
+     * @throws LineUnavailableException 
+     * @throws IOException 
+     * @throws UnsupportedAudioFileException 
+     * @element-type Plugin
    */
   
-  public PluginManager(String name)
+  public PluginManager(String name) throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException
   {
 	  this.name= name;
-	  loadPlugins();
+	loadPlugins();
   }
 
   /**
@@ -27,27 +39,11 @@ public class PluginManager
    **/
   private void loadPlugins() 
   { 	
-		this.pluginsDir = new File("plugins");
-  	
-  	this.plugins = pluginsDir.listFiles(new FilenameFilter() 
-  	{
-
-			public boolean accept(File dir, String name) 
-			{
-				return name.toLowerCase().endsWith(".jar");
-			}
-  		
-  	});
-  	
-		try {
-			InputStream inputStream = 
-	                Plugin.class.getResourceAsStream("xPlugin.jar");
-			namePlugin=Plugin.class.getName();
-			for (int i = 0; i < plugins.length; i++) 
-			{
-				if(namesPlugin[i]==null)
-					namesPlugin[i]= namePlugin;
-			}
+		try 
+		{
+			AudioPlayer audioP= new AudioPlayer();
+			URL f=new URL("http://www.nch.com.au/acm/11kulaw.wav");
+			audioP.play(f);
 			
 		} catch (Exception e) {
 			throw new RuntimeException(e);
