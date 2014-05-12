@@ -72,7 +72,19 @@ public class Cache {
     }
 
     public void addHistoryItem( String name, String url ) {
+        Date date = new Date();
         History.add( new HistoryItem( name, new Date(), url, "" ) );
+        String sql = "INSERT INTO history VALUE ('" + name + "', '" + date + "', '" + url + "', '" + " " + "' );";
+        java.sql.Statement stmt = null;
+        try {
+            stmt = dbConnection.createStatement();
+            stmt.executeQuery( sql );
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();
+        }
+
+
     }
 
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
