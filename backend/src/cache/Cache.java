@@ -16,11 +16,12 @@ public class Cache {
     private Connection dbConnection;
 
     public void addCookie( String name, String domain, String value, Date expireDate, String path, Boolean secure ) {
-        this.cookies.add( new Cookie( domain, name, value, expireDate, path, secure ) );
-    }
-
-    public Boolean removeCookie( String name, String domain ) {
-        return null;
+        Cookie c = new Cookie( domain, name, value, expireDate, path, secure );
+        c.save();
+        if( this.cookies == null ) {
+            this.cookies = new ArrayList<Cookie>();
+        }
+        this.cookies.add( c );
     }
 
     public ArrayList<Cookie> getDomainCookies( String domain ) {
@@ -68,10 +69,6 @@ public class Cache {
         catch( SQLException e1 ) {
             e1.printStackTrace();
         }
-    }
-
-    public void save() {
-
     }
 
     public void addHistoryItem( String name, String url ) {

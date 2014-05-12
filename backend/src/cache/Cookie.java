@@ -1,6 +1,7 @@
 package cache;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -38,6 +39,19 @@ public class Cookie {
     }
 
     public void delete() {
+        String sql = "DELETE FROM cookies " +
+                     "WHERE " +
+                     "domain = '" + this.domain + "' AND " +
+                     "name   = '" + this.name + "' AND " +
+                     "path   = '" + this.path + "';";
+        try {
+            java.sql.Statement stmt = this.dbConnection.createStatement();
+            stmt.executeQuery( sql );
+            this.dbConnection.commit();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();
+        }
     }
 
     public String getDomain() {
@@ -88,7 +102,36 @@ public class Cookie {
         this.secure = secure;
     }
 
-    public void insert() {
+    public boolean exists() {
+        String sql = "SELECT * FROM cookies WHERE domain = '" +
+                     this.domain + "' AND path = '" +
+                     this.path + "' AND name = '" +
+                     this.name + "');";
+        try {
+            java.sql.Statement st = this.dbConnection.createStatement();
+            ResultSet rs = st.executeQuery( sql );
+            int i = 0;
+            while( rs.next() ) {
+                i++;
+            }
+            return i > 0;
+        }
+        catch( SQLException e ) {
+            System.out.println( e.getMessage() );
+            return false;
+        }
+    }
+
+    public void save() {
+        if( this.exists() ) {
+            this.update();
+        }
+        else {
+            this.insert();
+        }
+    }
+
+    private void insert() {
         String sql = "INSERT INTO cookies( domain, name, value, expireDate, path, secure ) " +
                      "VALUES( '" +
                      this.domain + "', '" +
@@ -97,7 +140,7 @@ public class Cookie {
                      this.expireDate + ",'" +
                      this.path + "'," +
                      this.secure +
-                     " )";
+                     " );";
         try {
             java.sql.Statement st = this.dbConnection.createStatement();
             st.executeUpdate( sql );
@@ -105,6 +148,25 @@ public class Cookie {
         }
         catch( SQLException e ) {
             System.out.println( e.getMessage() );
+        }
+    }
+
+    private void update() {
+        String sql = "UPDATE cookies " +
+                     "SET value   = '" + this.value + "'," +
+                     " expireDate = '" + this.expireDate + "'," +
+                     " secure     = " + this.secure +
+                     " WHERE (" +
+                     " domain = '" + this.domain + "' AND " +
+                     " name   = '" + this.name + "' AND " +
+                     " path   = '" + this.path + "');";
+        try {
+            java.sql.Statement stmt = this.dbConnection.createStatement();
+            stmt.executeUpdate( sql );
+            this.dbConnection.commit();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();
         }
     }
 }
