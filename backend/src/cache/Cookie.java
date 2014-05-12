@@ -26,6 +26,7 @@ public class Cookie {
     public Cookie( String domain, String name, String value, Date expireDate, String path, Boolean secure ) {
         this.domain = domain;
         this.name = name;
+        this.path = path;
         this.value = value;
         this.expireDate = expireDate;
         this.secure = secure;

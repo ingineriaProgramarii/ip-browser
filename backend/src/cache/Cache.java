@@ -16,6 +16,7 @@ public class Cache {
     private Connection dbConnection;
 
     public void addCookie( String name, String domain, String value, Date expireDate, String path, Boolean secure ) {
+        this.cookies.add( new Cookie( domain, name, value, expireDate, path, secure ) );
     }
 
     public Boolean removeCookie( String name, String domain ) {
@@ -55,15 +56,16 @@ public class Cache {
         try {
             stmt = this.dbConnection.createStatement();
             ResultSet results = stmt.executeQuery( sql );
-            while (results.next()) {
-                String itemName = results.getString("name");
-                String itemUrl = results.getString("url");
-                String itemTag = results.getString("tag");
-                Date itemDate = results.getDate("date");
+            while( results.next() ) {
+                String itemName = results.getString( "name" );
+                String itemUrl = results.getString( "url" );
+                String itemTag = results.getString( "tag" );
+                Date itemDate = results.getDate( "date" );
                 History.add( new HistoryItem( itemName, itemDate, itemUrl, itemTag ) );
             }
             results.close();
-        } catch (SQLException e1) {
+        }
+        catch( SQLException e1 ) {
             e1.printStackTrace();
         }
     }
@@ -102,9 +104,9 @@ public class Cache {
                 catch( IllegalAccessException e ) {
                     e.printStackTrace();
                 }
-                if( pairs.getValue().toString().toUpperCase().contains(result.toUpperCase()) ) {
+                if( pairs.getValue().toString().toUpperCase().contains( result.toUpperCase() ) ) {
                     filterItems.add( item );
-               }
+                }
             }
             it.remove();
         }
