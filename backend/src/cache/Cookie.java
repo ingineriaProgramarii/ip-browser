@@ -17,14 +17,14 @@ public class Cookie {
 
     private String path;
 
-    private Boolean secure;
+    private int secure;
     private Connection dbConnection;
 
     public Cookie() {
         this.setConnection();
     }
 
-    public Cookie( String domain, String name, String value, String expireDate, String path, Boolean secure ) {
+    public Cookie( String domain, String name, String value, String expireDate, String path, int secure ) {
         this.domain = domain;
         this.name = name;
         this.path = path;
@@ -74,7 +74,7 @@ public class Cookie {
         return path;
     }
 
-    public Boolean getSecure() {
+    public int getSecure() {
         return secure;
     }
 
@@ -98,7 +98,7 @@ public class Cookie {
         this.path = path;
     }
 
-    public void setSecure( Boolean secure ) {
+    public void setSecure( int secure ) {
         this.secure = secure;
     }
 
@@ -106,7 +106,7 @@ public class Cookie {
         String sql = "SELECT * FROM cookies WHERE domain = '" +
                      this.domain + "' AND path = '" +
                      this.path + "' AND name = '" +
-                     this.name + "');";
+                     this.name + "';";
         try {
             java.sql.Statement st = this.dbConnection.createStatement();
             ResultSet rs = st.executeQuery( sql );
@@ -136,8 +136,8 @@ public class Cookie {
                      "VALUES( '" +
                      this.domain + "', '" +
                      this.name + "','" +
-                     this.value + "'," +
-                     this.expireDate + ",'" +
+                     this.value + "','" +
+                     this.expireDate + "','" +
                      this.path + "'," +
                      this.secure +
                      " );";
@@ -163,7 +163,6 @@ public class Cookie {
         try {
             java.sql.Statement stmt = this.dbConnection.createStatement();
             stmt.executeUpdate( sql );
-            this.dbConnection.commit();
         }
         catch( SQLException e ) {
             e.printStackTrace();
