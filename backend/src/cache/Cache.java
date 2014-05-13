@@ -17,7 +17,7 @@ public class Cache {
 
     private Connection dbConnection;
 
-    public void addCookie( String name, String domain, String value, String expireDate, String path, Boolean secure ) {
+    public void addCookie( String name, String domain, String value, String expireDate, String path, int secure ) {
         Cookie c = new Cookie( domain, name, value, expireDate, path, secure );
         if( this.cookies == null ) {
             this.cookies = new ArrayList<>();
@@ -43,7 +43,7 @@ public class Cache {
                         results.getString( "value" ),
                         results.getString( "expireDate" ),
                         results.getString( "path" ),
-                        results.getBoolean( "secure" ) )
+                        results.getInt( "secure" ) )
                                 );
             }
             results.close();
@@ -55,16 +55,24 @@ public class Cache {
 
     public void saveCookies() {
         Date now = new Date();
-        for( Cookie c : this.cookies ) {
-            try {
-                Date cookieDate = new SimpleDateFormat( "yyyy-MM-d HH:mm:ss" ).parse( c.getExpireDate() );
-                if( now.compareTo( cookieDate ) < 0 ) {
-                    c.save();
+        try {
+            Date date1 = new SimpleDateFormat( "EEE MMM dd HH:mm:ss z yyy" ).parse( now.toString() );
+            for( Cookie c : this.cookies ) {
+                try {
+                    System.out.println( "Datb : " + c.getExpireDate() );
+                    Date cookieDate = new SimpleDateFormat( "EEE, dd-MMM-yyyy HH:mm:ss z",
+                                                            Locale.ENGLISH ).parse( c.getExpireDate() );
+                    if( date1.compareTo( cookieDate ) < 0 ) {
+                        c.save();
+                    }
+                }
+                catch( ParseException e ) {
+                    e.printStackTrace();
                 }
             }
-            catch( ParseException e ) {
-                e.printStackTrace();
-            }
+        }
+        catch( ParseException e ) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
 
@@ -169,7 +177,7 @@ public class Cache {
         Date now = new Date();
         for( Cookie c : this.cookies ) {
             if( c.getDomain() == domain && c.getPath() == path ) {
-                if( https || ( !https && !c.getSecure() ) ) {
+                if( https || ( !https && c.getSecure() == 0 ) ) {
                     try {
                         Date cookieDate = new SimpleDateFormat( "yyyy-MM-d HH:mm:ss" ).parse( c.getExpireDate() );
                         if( now.compareTo( cookieDate ) < 0 ) {
@@ -183,5 +191,34 @@ public class Cache {
             }
         }
         return cookies;
+    }
+
+    public String resourceExists( String url ) {
+        String sql = "SELECT * FROM cache WHERE url = '" + url + "';";
+        String path = null;
+        try {
+            java.sql.Statement st = this.dbConnection.createStatement();
+            ResultSet rs = st.executeQuery( sql );
+            while( rs.next() ) {
+                path = rs.getString( "path" );
+            }
+            return path;
+        }
+        catch( SQLException e ) {
+            System.out.println( e.getMessage() );
+            return null;
+        }
+    }
+
+    public void addResourceToDB( String url, String path ) {
+        String sql = "INSERT INTO cache VALUES ('" + url + "', '" + path + "');";
+        try {
+            java.sql.Statement stmt = this.dbConnection.createStatement();
+            stmt.executeUpdate( sql );
+            //this.dbConnection.commit();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }
