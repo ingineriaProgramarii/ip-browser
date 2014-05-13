@@ -5,6 +5,8 @@ import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Cache {
@@ -15,42 +17,79 @@ public class Cache {
 
     private Connection dbConnection;
 
-    public void addCookie( String name, String domain, String value, Date expireDate, String path, Boolean secure ) {
+    public void addCookie( String name, String domain, String value, String expireDate, String path, int secure ) {
         Cookie c = new Cookie( domain, name, value, expireDate, path, secure );
-        c.save();
         if( this.cookies == null ) {
-            this.cookies = new ArrayList<Cookie>();
+            this.cookies = new ArrayList<>();
         }
         this.cookies.add( c );
     }
 
-    public ArrayList<Cookie> getDomainCookies( String domain ) {
+    public void addCookie( Cookie c ) {
+        this.cookies.add( c );
+    }
+
+    public void loadCookies() {
         this.cookies = new ArrayList<Cookie>();
-        String sql = "SELECT * FROM cookies WHERE domain = '" + domain + "' AND expireDate < DATETIME('now');";
+        String sql = "SELECT * FROM cookies;";
         java.sql.Statement stmt = null;
         try {
             stmt = dbConnection.createStatement();
             ResultSet results = stmt.executeQuery( sql );
             while( results.next() ) {
-                cookies.add( new Cookie(
-                        domain,
+                this.cookies.add( new Cookie(
+                        results.getString( "domain" ),
                         results.getString( "name" ),
                         results.getString( "value" ),
-                        results.getDate( "expireDate" ),
+                        results.getString( "expireDate" ),
                         results.getString( "path" ),
-                        results.getBoolean( "secure" ) )
-                           );
+                        results.getInt( "secure" ) )
+                                );
             }
             results.close();
         }
         catch( SQLException e ) {
             e.printStackTrace();
         }
-        return this.cookies;
+    }
+
+    public void saveCookies() {
+        Date now = new Date();
+        try {
+            Date date1 = new SimpleDateFormat( "EEE MMM dd HH:mm:ss z yyy" ).parse( now.toString() );
+            for( Cookie c : this.cookies ) {
+                try {
+                    System.out.println( "Datb : " + c.getExpireDate() );
+                    Date cookieDate;
+                    if( c.getExpireDate().length() > 0 ) {
+                        if( c.getExpireDate().indexOf( "," ) > 0 ) {
+                            cookieDate = new SimpleDateFormat( "EEE, dd-MMM-yyyy HH:mm:ss z",
+                                                               Locale.ENGLISH ).parse( c.getExpireDate() );
+                        }
+                        else {
+                            cookieDate = new SimpleDateFormat( "yyyy-mm-dd HH:mm:ss", Locale.ENGLISH ).parse( c.getExpireDate() );
+                        }
+                        if( date1.compareTo( cookieDate ) < 0 ) {
+                            c.save();
+                        }
+                    }
+                }
+                catch( ParseException e ) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        catch( ParseException e ) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     public Cache() {
         this.dbConnection = Database.getInstance().getConn();
+        this.History = new ArrayList<>();
+        this.cookies = new ArrayList<>();
+
+        this.loadCookies();
 
         String sql = "SELECT * FROM history";
         java.sql.Statement stmt = null;
@@ -72,19 +111,9 @@ public class Cache {
     }
 
     public void addHistoryItem( String name, String url ) {
-        Date date = new Date();
-        History.add( new HistoryItem( name, new Date(), url, "" ) );
-        String sql = "INSERT INTO history VALUE ('" + name + "', '" + date + "', '" + url + "', '" + " " + "' );";
-        java.sql.Statement stmt = null;
-        try {
-            stmt = dbConnection.createStatement();
-            stmt.executeQuery( sql );
-        }
-        catch( SQLException e ) {
-            e.printStackTrace();
-        }
-
-
+        HistoryItem hi = new HistoryItem( name, new Date(), url, "" );
+        History.add( hi );
+        hi.save();
     }
 
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
@@ -151,5 +180,55 @@ public class Cache {
             e.printStackTrace();
         }
         return path;
+    }
+
+    public String getDomainCookies( String domain, String path, Boolean https ) {
+        String cookies = "";
+        Date now = new Date();
+        for( Cookie c : this.cookies ) {
+            if( c.getDomain() == domain && c.getPath() == path ) {
+                if( https || ( !https && c.getSecure() == 0 ) ) {
+                    try {
+                        Date cookieDate = new SimpleDateFormat( "yyyy-MM-d HH:mm:ss" ).parse( c.getExpireDate() );
+                        if( now.compareTo( cookieDate ) < 0 ) {
+                            cookies += c.getName() + "=" + c.getValue() + ";";
+                        }
+                    }
+                    catch( ParseException e ) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return cookies;
+    }
+
+    public String resourceExists( String url ) {
+        String sql = "SELECT * FROM cache WHERE url = '" + url + "';";
+        String path = null;
+        try {
+            java.sql.Statement st = this.dbConnection.createStatement();
+            ResultSet rs = st.executeQuery( sql );
+            while( rs.next() ) {
+                path = rs.getString( "path" );
+            }
+            return path;
+        }
+        catch( SQLException e ) {
+            System.out.println( e.getMessage() );
+            return null;
+        }
+    }
+
+    public void addResourceToDB( String url, String path ) {
+        String sql = "INSERT INTO cache VALUES ('" + path + "', '" + url + "');";
+        try {
+            java.sql.Statement stmt = this.dbConnection.createStatement();
+            stmt.executeUpdate( sql );
+            //this.dbConnection.commit();
+        }
+        catch( SQLException e ) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }

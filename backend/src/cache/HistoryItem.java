@@ -59,4 +59,8 @@ public class HistoryItem {
     public String getTag() {
         return tag;
     }
+
+    public void save() {
+
+    }
 }
