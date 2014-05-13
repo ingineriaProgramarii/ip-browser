@@ -13,9 +13,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class Requests {
 
@@ -373,7 +371,7 @@ public class Requests {
 
             this.cache.saveCookies();
             domTree = Jsoup.parse( response.toString());
-            //System.out.println("DOM : " + domTree);
+            System.out.println("DOM : " + domTree);
             in.close();
             Connection.Response res = Jsoup.connect(url).method( Connection.Method.GET).execute();
             Document doc = res.parse();
@@ -394,13 +392,84 @@ public class Requests {
     // HTTP POST request
     public Document sendPost() throws Exception {
 
-        HashMap<String, String> postParams = new HashMap<String, String>();
+       /* HashMap<String, String> postParams = new HashMap<String, String>();
         Document domTree = Jsoup.connect( this.url )
                                 .data( this.params )
                                 .post();
         System.out.println( domTree );
-        return domTree;
+        return domTree; */
+        URL targetUrl;
+        HttpURLConnection connection = null;
+        try {
+            //Create connection
+            targetUrl = new URL(this.url);
+            connection = (HttpURLConnection)targetUrl.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type",
+                                          "application/x-www-form-urlencoded");
+            connection.setRequestProperty( "Cookie", this.cache
+                    .getDomainCookies( this.getDomainName( this.url ), targetUrl.getPath(), url
+                            .startsWith( "https" ) ) );
 
+           // StringBuilder parametriPost = new StringBuilder( "&" );
+            StringBuilder parametriPost = new StringBuilder(  );
+            for (Map.Entry<String, String> entry  : this.params.entrySet())
+                parametriPost.append( entry.getKey() + "=" + URLEncoder.encode(entry.getValue(), "UTF-8") + "&");
+            parametriPost.deleteCharAt( parametriPost.length() -1 );
+
+            connection.setRequestProperty("Content-Length", "" +
+                                                            Integer.toString(parametriPost.toString().getBytes().length));
+            connection.setRequestProperty("Content-Language", "en-US");
+
+            connection.setUseCaches (false);
+            connection.setDoInput(true);
+            connection.setDoOutput(true);
+
+            //Send request
+            DataOutputStream wr = new DataOutputStream (
+                    connection.getOutputStream ());
+            wr.writeBytes (parametriPost.toString());
+            wr.flush ();
+            wr.close ();
+
+            //Get Response
+            InputStream is = connection.getInputStream();
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            String line;
+            StringBuffer response = new StringBuffer();
+            while((line = rd.readLine()) != null) {
+                response.append(line);
+                response.append('\r');
+            }
+            rd.close();
+            //return response.toString();
+            System.out.println( connection.getHeaderFields() );
+
+            this.getCookies( connection.getHeaderFields().get( "Set-Cookie" ) );
+
+            this.cache.addHistoryItem( this.url, this.url );
+
+            this.cache.saveCookies();
+            Document domTree = Jsoup.parse( response.toString());
+
+            System.out.println(domTree);
+            Connection.Response res = Jsoup.connect(url).method( Connection.Method.POST).data( this.params ).execute();
+            Document doc = res.parse();
+            this.getResource( doc );
+            return  domTree;
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if(connection != null) {
+                connection.disconnect();
+            }
+        }
+        //return null;
     }
 
     public Document sendRequest() {
