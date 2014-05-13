@@ -40,7 +40,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for name field
      * @return the name of the HistoryItem
      */
     public String getName() {
@@ -56,7 +56,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for date
      * @return field lastAccess in Date format
      */
     public Date getLastAccess() {
@@ -64,7 +64,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for date in string format
      * @return date of lastAccess in string format
      */
     public String getDate() {
@@ -72,7 +72,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for lastAcces
      * @param lastAccess
      */
     public void setLastAccess( Date lastAccess ) {
@@ -80,7 +80,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for url field
      * @return url
      */
     public String getUrl() {
@@ -104,7 +104,7 @@ public class HistoryItem {
     }
 
     /**
-     *
+     * getter for tag field
      * @return the tag of the site
      */
     public String getTag() {

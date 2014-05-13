@@ -81,7 +81,7 @@ public class Cookie {
     }
 
     /**
-     *
+     * getter for name field
      * @return name for this cookie
      */
     public String getName() {
@@ -89,7 +89,7 @@ public class Cookie {
     }
 
     /**
-     *
+     * getter for value field
      * @return (string) value for this cookie
      */
     public String getValue() {
@@ -97,7 +97,7 @@ public class Cookie {
     }
 
     /**
-     *
+     * getter for expireDate field
      * @return (string) the date when this cookie expire
      */
     public String getExpireDate() {
@@ -105,7 +105,7 @@ public class Cookie {
     }
 
     /**
-     *
+     * getter for path field
      * @return path for this cookie
      */
     public String getPath() {
@@ -113,7 +113,7 @@ public class Cookie {
     }
 
     /**
-     *
+     * getter for secure option
      * @return 1 if cookie is secure 0 else
      */
     public int getSecure() {

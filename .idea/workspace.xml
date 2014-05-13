@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a2b3c1d-936b-4b15-948b-9bc9ac0fde28" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="DELETED" beforePath="D:\Informatica\Ingineria Programarii\ip-browser\backend\out\production\backend\MainClass.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Informatica\Ingineria Programarii\ip-browser\backend\src\MainClass.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/backend/BackEnd.java" afterPath="$PROJECT_DIR$/backend/src/backend/BackEnd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/cache/Cache.java" afterPath="$PROJECT_DIR$/backend/src/cache/Cache.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/cache/Cookie.java" afterPath="$PROJECT_DIR$/backend/src/cache/Cookie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/cache/Database.java" afterPath="$PROJECT_DIR$/backend/src/cache/Database.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/cache/HistoryItem.java" afterPath="$PROJECT_DIR$/backend/src/cache/HistoryItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/MainClass.java" afterPath="$PROJECT_DIR$/backend/src/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/requests/Parser.java" afterPath="$PROJECT_DIR$/backend/src/requests/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/requests/Requests.java" afterPath="$PROJECT_DIR$/backend/src/requests/Requests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -86,10 +86,8 @@
       <file leaf-file-name="Cache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="51" selection-start="8703" selection-end="8703" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="5083">
+            <state line="108" column="20" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4964">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5281#5294#0" expanded="true" />
                 <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
                 <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
                 <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -101,16 +99,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Parser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/requests/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="66" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="969">
+              <folding>
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Requests.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/src/requests/Requests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.1522388" vertical-offset="0" max-vertical-offset="5780">
+              <folding>
+                <element signature="method#getResource#0;class#Requests#0" expanded="false" />
+                <element signature="method#getExtension#0;class#Requests#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BackEnd.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/backend/BackEnd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="32" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="2431">
-              <folding>
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-              </folding>
+            <state line="27" column="32" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="2028" max-vertical-offset="2363">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,11 +141,8 @@
       <file leaf-file-name="Database.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="48" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="469" max-vertical-offset="833">
-              <folding>
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#968#969#0" expanded="true" />
-              </folding>
+            <state line="26" column="47" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,36 +150,12 @@
       <file leaf-file-name="Cookie.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/Cookie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="29" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="4301">
+            <state line="115" column="31" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893">
               <folding>
-                <element signature="e#1972#1973#0" expanded="true" />
-                <element signature="e#2001#2002#0" expanded="true" />
-                <element signature="e#2091#2092#0" expanded="true" />
-                <element signature="e#2118#2119#0" expanded="true" />
-                <element signature="e#2219#2220#0" expanded="true" />
-                <element signature="e#2247#2248#0" expanded="true" />
-                <element signature="e#2364#2365#0" expanded="true" />
-                <element signature="e#2397#2398#0" expanded="true" />
-                <element signature="e#2487#2488#0" expanded="true" />
-                <element signature="e#2514#2515#0" expanded="true" />
-                <element signature="e#2611#2612#0" expanded="true" />
-                <element signature="e#2640#2641#0" expanded="true" />
-                <element signature="e#2765#2766#0" expanded="true" />
-                <element signature="e#2801#2802#0" expanded="true" />
-                <element signature="e#2901#2902#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
-                <element signature="e#3037#3038#0" expanded="true" />
-                <element signature="e#3071#3072#0" expanded="true" />
-                <element signature="e#3196#3197#0" expanded="true" />
-                <element signature="e#3240#3241#0" expanded="true" />
-                <element signature="e#3346#3347#0" expanded="true" />
-                <element signature="e#3378#3379#0" expanded="true" />
-                <element signature="e#3489#3490#0" expanded="true" />
-                <element signature="e#3525#3526#0" expanded="true" />
-                <marker date="1400007567258" expanded="true" signature="1362:1588" placeholder="DELETE FROM ..." />
-                <marker date="1400007567258" expanded="true" signature="3673:3856" placeholder="SELECT * FRO..cookies..." />
-                <marker date="1400007567258" expanded="true" signature="4573:4954" placeholder="INSERT INTO ..." />
-                <marker date="1400007567258" expanded="true" signature="5350:5758" placeholder="UPDATE cooki..." />
+                <marker date="1400009258982" expanded="true" signature="1362:1588" placeholder="DELETE FROM ..." />
+                <marker date="1400009258982" expanded="true" signature="3793:3976" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1400009258982" expanded="true" signature="4693:5074" placeholder="INSERT INTO ..." />
+                <marker date="1400009258982" expanded="true" signature="5470:5878" placeholder="UPDATE cooki..." />
               </folding>
             </state>
           </provider>
@@ -168,25 +164,8 @@
       <file leaf-file-name="HistoryItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="46" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="1778" max-vertical-offset="2142">
-              <folding>
-                <element signature="e#1047#1048#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#1199#1200#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1336#1337#0" expanded="true" />
-                <element signature="e#1369#1370#0" expanded="true" />
-                <element signature="e#1618#1619#0" expanded="true" />
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1734#1735#0" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
-                <element signature="e#1874#1875#0" expanded="true" />
-                <element signature="e#1904#1905#0" expanded="true" />
-                <element signature="e#2016#2017#0" expanded="true" />
-                <element signature="e#2042#2043#0" expanded="true" />
-                <element signature="e#2130#2131#0" expanded="true" />
-                <element signature="e#2156#2157#0" expanded="true" />
-              </folding>
+            <state line="42" column="28" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,15 +179,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="history" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -227,20 +206,20 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/backend/src/backend/BackEnd.java" />
         <option value="$PROJECT_DIR$/backend/src/cache/Cache.java" />
-        <option value="$PROJECT_DIR$/backend/src/cache/Database.java" />
-        <option value="$PROJECT_DIR$/backend/src/cache/HistoryItem.java" />
-        <option value="$PROJECT_DIR$/backend/src/cache/Cookie.java" />
         <option value="$PROJECT_DIR$/backend/src/MainClass.java" />
+        <option value="$PROJECT_DIR$/backend/src/backend/BackEnd.java" />
+        <option value="$PROJECT_DIR$/backend/src/cache/HistoryItem.java" />
+        <option value="$PROJECT_DIR$/backend/src/cache/Database.java" />
+        <option value="$PROJECT_DIR$/backend/src/cache/Cookie.java" />
+        <option value="$PROJECT_DIR$/backend/src/requests/Parser.java" />
+        <option value="$PROJECT_DIR$/backend/src/requests/Requests.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1319" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -319,6 +298,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -599,6 +582,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -616,12 +605,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="0" />
@@ -657,7 +640,8 @@
       <workItem from="1399822257490" duration="2280000" />
       <workItem from="1399919762629" duration="2165000" />
       <workItem from="1399995418455" duration="244000" />
-      <workItem from="1399995819789" duration="8618000" />
+      <workItem from="1399995819789" duration="8770000" />
+      <workItem from="1400008750453" duration="1584000" />
     </task>
     <task id="LOCAL-00001" summary="Adaugat constructor la HistoryItem.">
       <created>1399818407455</created>
@@ -675,11 +659,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24200000" />
+    <option name="totallyTimeSpent" value="25936000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1319" height="728" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -687,7 +671,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17598188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18477398" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -700,13 +684,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25075528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2632831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33835846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -734,10 +718,72 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="255" column="51" selection-start="8703" selection-end="8703" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="5083">
+          <folding>
+            <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
+            <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
+            <marker date="1400005861981" expanded="true" signature="7114:7168" placeholder="SELECT path ..cache..." />
+            <marker date="1400005861981" expanded="true" signature="8816:8861" placeholder="SELECT * FRO..cache..." />
+            <marker date="1400005861981" expanded="true" signature="9500:9556" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/backend/BackEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="32" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="48" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/cache/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="29" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4352">
+          <folding>
+            <marker date="1400009258982" expanded="true" signature="1362:1588" placeholder="DELETE FROM ..." />
+            <marker date="1400009258982" expanded="true" signature="3793:3976" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1400009258982" expanded="true" signature="4693:5074" placeholder="INSERT INTO ..." />
+            <marker date="1400009258982" expanded="true" signature="5470:5878" placeholder="UPDATE cooki..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="46" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="1778" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ip-browser.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="152" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="13" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="4080">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5281#5294#0" expanded="true" />
             <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
             <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
             <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -749,46 +795,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="9" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="612">
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,8 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="30" selection-start="2938" selection-end="2938" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2737">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5281#5294#0" expanded="true" />
             <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
             <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
             <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -816,46 +840,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="9" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="612">
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="1" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1156">
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,11 +875,6 @@
         <state line="17" column="22" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/requests/Parser.java">
@@ -897,8 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="20" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2550">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5281#5294#0" expanded="true" />
             <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
             <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
             <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -910,46 +907,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="9" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="612">
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="33" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1156">
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -965,11 +942,6 @@
         <state line="61" column="24" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="44" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/requests/Parser.java">
@@ -991,8 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="5" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="629">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5281#5294#0" expanded="true" />
             <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
             <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
             <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -1006,34 +976,14 @@
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="612">
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1088">
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,121 +1001,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/requests/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="287" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/requests/Requests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="12" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="3111" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17765">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17765" />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/backend/BackEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="32" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="2028" max-vertical-offset="2363">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/HistoryItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="46" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="1778" max-vertical-offset="2142">
-          <folding>
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1618#1619#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-          </folding>
+        <state line="42" column="28" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="833">
-          <folding>
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/backend/BackEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="32" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="2431">
-          <folding>
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-          </folding>
+        <state line="26" column="47" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Cookie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="29" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="4301">
+        <state line="115" column="31" selection-start="2651" selection-end="2651" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893">
           <folding>
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
-            <element signature="e#2091#2092#0" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2219#2220#0" expanded="true" />
-            <element signature="e#2247#2248#0" expanded="true" />
-            <element signature="e#2364#2365#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#2640#2641#0" expanded="true" />
-            <element signature="e#2765#2766#0" expanded="true" />
-            <element signature="e#2801#2802#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-            <element signature="e#3037#3038#0" expanded="true" />
-            <element signature="e#3071#3072#0" expanded="true" />
-            <element signature="e#3196#3197#0" expanded="true" />
-            <element signature="e#3240#3241#0" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-            <element signature="e#3378#3379#0" expanded="true" />
-            <element signature="e#3489#3490#0" expanded="true" />
-            <element signature="e#3525#3526#0" expanded="true" />
-            <marker date="1400007567258" expanded="true" signature="1362:1588" placeholder="DELETE FROM ..." />
-            <marker date="1400007567258" expanded="true" signature="3673:3856" placeholder="SELECT * FRO..cookies..." />
-            <marker date="1400007567258" expanded="true" signature="4573:4954" placeholder="INSERT INTO ..." />
-            <marker date="1400007567258" expanded="true" signature="5350:5758" placeholder="UPDATE cooki..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#627#643#0" expanded="true" />
+            <marker date="1400009258982" expanded="true" signature="1362:1588" placeholder="DELETE FROM ..." />
+            <marker date="1400009258982" expanded="true" signature="3793:3976" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1400009258982" expanded="true" signature="4693:5074" placeholder="INSERT INTO ..." />
+            <marker date="1400009258982" expanded="true" signature="5470:5878" placeholder="UPDATE cooki..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="51" selection-start="8703" selection-end="8703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5083">
+        <state line="108" column="20" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4964">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5281#5294#0" expanded="true" />
             <marker date="1400005861981" expanded="true" signature="1406:1427" placeholder="SELECT * FRO..cookies..." />
             <marker date="1400005861981" expanded="true" signature="3987:4008" placeholder="SELECT * FRO..history..." />
             <marker date="1400005861981" expanded="true" signature="6601:6655" placeholder="DELETE FROM ..." />
@@ -1176,14 +1063,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/2e9e2c54/0402155f-d226-4646-9500-7bcee2ee7f61/..history">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
+    <entry file="file://$PROJECT_DIR$/backend/src/requests/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="66" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="969">
+          <folding>
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/requests/Requests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.1522388" vertical-offset="0" max-vertical-offset="5780">
+          <folding>
+            <element signature="method#getResource#0;class#Requests#0" expanded="false" />
+            <element signature="method#getExtension#0;class#Requests#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

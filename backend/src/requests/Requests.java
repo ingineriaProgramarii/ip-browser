@@ -28,7 +28,7 @@ public class Requests {
     private Cache cache;
 
     /**
-     *
+     * setter for link field
      * @param link
      */
     public void setUrl( String link ) {
@@ -36,15 +36,15 @@ public class Requests {
     }
 
     /**
-     *
-     * @return
+     * getter for url field
+     * @return string url
      */
     public String getUrl() {
         return this.url;
     }
 
     /**
-     *
+     * setter for type field - (type of request)
      * @param type
      */
     public void setType( String type ) {
@@ -52,25 +52,33 @@ public class Requests {
     }
 
     /**
-     *
-     * @return
+     * getter for type of request
+     * @return String type
      */
     public String getType() {
         return type;
     }
 
     /**
-     *
-     * @return
+     * getter for parameters
+     * @return HashMap<string, string> contains parameters
      */
     public HashMap<String, String> getParams() {
         return params;
     }
 
+    /**
+     * setter for parameters
+     * @param params
+     */
     public void setParams( HashMap<String, String> params ) {
         this.params = params;
     }
 
+    /**
+     * Constructor for requests
+     * Initialize type, params and url
+     */
     public Requests() {
         type = new String();
         params = new HashMap();
@@ -78,6 +86,11 @@ public class Requests {
         this.cache = new Cache();
     }
 
+    /**
+     * From domTree document extract resource and put in local directory
+     * Local path are saved in data base
+     * @param domTree
+     */
     public void getResource( Document domTree ) {
         dirExists();
 
@@ -275,7 +288,11 @@ public class Requests {
         }
     }
 
-
+    /**
+     * Extract extension for resource
+     * @param path - path for resource
+     * @return string - represent extension
+     */
     private String getExtension( String path ) {
         String extension = "";
         int i = path.lastIndexOf( "." );
@@ -285,16 +302,27 @@ public class Requests {
         return extension;
     }
 
+    /**
+     * Generate UUID
+     * @return a string which represent a randUUID
+     */
     private String genUUID() {
         String uuid = UUID.randomUUID().toString().replaceAll( "-", "" );
         return uuid;
     }
 
+    /**
+     * check if directory exists and create a new file temp
+     */
     private void dirExists() {
         File f = new File( "temp" );
         if( !f.exists() || !f.isDirectory() ) { f.mkdir(); }
     }
 
+    /**
+     * Extract cookies from a list of headers and add him to catch cookie
+     * @param headers
+     */
     public void getCookies( List<String> headers ) {
         for( String cookie : headers ) {
             String[] sc = cookie.split( ";" );
@@ -329,7 +357,10 @@ public class Requests {
         }
     }
 
-    // HTTP GET request
+    /**
+     * Send Get request and return one Document as response
+     * @return Document
+     */
     public Document sendGet() {
 
         URL obj = null;
@@ -389,7 +420,11 @@ public class Requests {
         }
     }
 
-    // HTTP POST request
+    /**
+     * Http send Post request and recieve one Document
+     * @return Document
+     * @throws Exception
+     */
     public Document sendPost() throws Exception {
 
        /* HashMap<String, String> postParams = new HashMap<String, String>();
@@ -472,6 +507,10 @@ public class Requests {
         //return null;
     }
 
+    /**
+     * Send Request - get/post
+     * @return Document - resource from server
+     */
     public Document sendRequest() {
 
         //String requestResponse = new String();
@@ -497,6 +536,11 @@ public class Requests {
         return domTree;
     }
 
+    /**
+     * Get domain name form a ceratin url
+     * @param url
+     * @return string - domain name
+     */
     public String getDomainName( String url ) {
         URI uri = null;
         try {

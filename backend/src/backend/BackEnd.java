@@ -25,7 +25,7 @@ public class BackEnd {
     private int respCode;
 
     /**
-     *
+     * getter for request object
      * @return Requests object that is responsible for making requests
      */
     public Requests getRequest() {
@@ -41,7 +41,7 @@ public class BackEnd {
     }
 
     /**
-     *
+     * getter for Cache
      * @return Cache object that represents the application repository
      */
     public Cache getCache() {
@@ -49,7 +49,7 @@ public class BackEnd {
     }
 
     /**
-     *
+     * setter for respcode field
      * @param code - response code form page
      */
     public void setRespCode( int code ) {
@@ -67,7 +67,7 @@ public class BackEnd {
     }
 
     /**
-     *
+     * Static method return instace of object
      * @return instance of object BackEnd
      */
     public static BackEnd getInstance() {

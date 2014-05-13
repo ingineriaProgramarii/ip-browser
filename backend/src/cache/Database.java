@@ -24,7 +24,7 @@ public class Database {
     }
 
     /**
-     * static method
+     * static method - return Database instance
      * @return instance of object DataBase
      */
     public static Database getInstance() {
@@ -35,7 +35,7 @@ public class Database {
     }
 
     /**
-     *
+     * getter for DB connection
      * @return connection from DataBase - SQlite
      */
     public Connection getConn() {
