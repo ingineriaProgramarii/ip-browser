@@ -24,27 +24,52 @@ public class BackEnd {
 
     private int respCode;
 
-
+    /**
+     *
+     * @return Requests object that is responsible for making requests
+     */
     public Requests getRequest() {
         return request;
     }
 
+    /**
+     * Assign the request objects
+     * @param request -
+     */
     public void setRequest( Requests request ) {
         this.request = request;
     }
 
+    /**
+     *
+     * @return Cache object that represents the application repository
+     */
     public Cache getCache() {
         return cache;
     }
 
+    /**
+     *
+     * @param code - response code form page
+     */
     public void setRespCode( int code ) {
         this.respCode = code;
     }
 
+    /**
+     * Pattern Singleton
+     * Class constructor
+     * Is private
+     * It wants a single object instance for backend
+     */
     private BackEnd() {
         this.request = new Requests();
     }
 
+    /**
+     *
+     * @return instance of object BackEnd
+     */
     public static BackEnd getInstance() {
         if( instance == null ) {
             instance = new BackEnd();
@@ -52,7 +77,14 @@ public class BackEnd {
         return instance;
     }
 
-    // functie apelata de cei de la front-end
+    /**
+     * Method created for Front-End
+     * It is responsible for parsing the dom tree of the web page
+     * @param link web site link
+     * @param typeRequest the type of request (get,post)
+     * @param params - parameters for request
+     * @return
+     */
     public Document getDOM( String link, String typeRequest, HashMap<String, String> params ) {
         //String htmlResource = new String();
 
@@ -72,6 +104,11 @@ public class BackEnd {
         return null;
     }*/
 
+    /**
+     * History filter after a certain characteristic
+     * @param filters
+     * @return one list of HistoryItems from filtering history
+     */
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
         return null;
     }

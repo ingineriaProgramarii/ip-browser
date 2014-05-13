@@ -11,14 +11,19 @@ import java.util.HashMap;
  */
 
 /**
- * @author fasdf
+ * @author BackEnd Team
+ * @version 1.1
  */
 public class MainClass {
     public static BackEnd backEnd;
 
+    /**
+     * This is the main method which makes use of backEnd object.
+     * @param args
+     */
     public static void main( String[] args ) {
         backEnd = BackEnd.getInstance();
-        HashMap<String, String> inputFields = new HashMap<>(  );
+        HashMap<String, String> inputFields = new HashMap<String, String>(  );
         inputFields.put( "lsd", "AVoPoI8k" );
         inputFields.put( "email", "ursulet.andreea@yahoo.com" );
         inputFields.put( "pass", "abyma8yqe6u2y2u" );

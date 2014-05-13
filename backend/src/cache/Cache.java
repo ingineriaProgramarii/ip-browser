@@ -17,18 +17,34 @@ public class Cache {
 
     private Connection dbConnection;
 
+    /**
+     * Add custom cookie to list
+     * @param name - name of cookie
+     * @param domain - domain of cookie
+     * @param value - value for cookie
+     * @param expireDate - date when cookie become invalid
+     * @param path - location for cookie
+     * @param secure - secure option
+     */
     public void addCookie( String name, String domain, String value, String expireDate, String path, int secure ) {
         Cookie c = new Cookie( domain, name, value, expireDate, path, secure );
         if( this.cookies == null ) {
-            this.cookies = new ArrayList<>();
+            this.cookies = new ArrayList<Cookie>();
         }
         this.cookies.add( c );
     }
 
+    /**
+     * Add standard object Cookie to list
+     * @param c - one object which descrie one cookie
+     */
     public void addCookie( Cookie c ) {
         this.cookies.add( c );
     }
 
+    /**
+     * get all cookie from sqllite-browser.db
+     */
     public void loadCookies() {
         this.cookies = new ArrayList<Cookie>();
         String sql = "SELECT * FROM cookies;";
@@ -53,6 +69,10 @@ public class Cache {
         }
     }
 
+    /**
+     * Check cookies which are expired and remove them
+     * Save cookies
+     */
     public void saveCookies() {
         Date now = new Date();
         try {
@@ -84,10 +104,14 @@ public class Cache {
         }
     }
 
+    /**
+     * Constructor for Cache object
+     * This method initializate history, cookies adn dbConnection fields
+     */
     public Cache() {
         this.dbConnection = Database.getInstance().getConn();
-        this.History = new ArrayList<>();
-        this.cookies = new ArrayList<>();
+        this.History = new ArrayList<HistoryItem>();
+        this.cookies = new ArrayList<Cookie>();
 
         this.loadCookies();
 
@@ -110,12 +134,22 @@ public class Cache {
         }
     }
 
+    /**
+     * Add in database current page of browser
+     * @param name
+     * @param url
+     */
     public void addHistoryItem( String name, String url ) {
         HistoryItem hi = new HistoryItem( name, new Date(), url, "" );
         History.add( hi );
         hi.save();
     }
 
+    /**
+     * Get all historyItems whitch match the filter
+     * @param filters - two strings - ex ( "name","google")
+     * @return one list of History Items
+     */
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
         ArrayList<HistoryItem> filterItems = new ArrayList<HistoryItem>();
 
@@ -151,6 +185,9 @@ public class Cache {
         return null;
     }
 
+    /**
+     * detele expired cookies from data base
+     */
     public void deleteExpiredCookies() {
         String sql = "DELETE FROM cookies WHERE expireDate < DATETIME('now')";
         java.sql.Statement stmt = null;
@@ -164,6 +201,11 @@ public class Cache {
         }
     }
 
+    /**
+     * Search for cache item
+     * @param url
+     * @return - ( String ) path
+     */
     public String getCacheItem( String url ) {
         String sql = "SELECT path FROM cache WHERE url='" + url + "' LIMIT 1;";
         String path = null;
@@ -182,6 +224,13 @@ public class Cache {
         return path;
     }
 
+    /**
+     * Get all cookies from a certain domain
+     * @param domain - domaine for cookies
+     * @param path
+     * @param https - the protocol is secure ( https)
+     * @return
+     */
     public String getDomainCookies( String domain, String path, Boolean https ) {
         String cookies = "";
         Date now = new Date();
@@ -203,6 +252,11 @@ public class Cache {
         return cookies;
     }
 
+    /**
+     * Check if one resource exists cache data base
+     * @param url
+     * @return
+     */
     public String resourceExists( String url ) {
         String sql = "SELECT * FROM cache WHERE url = '" + url + "';";
         String path = null;
@@ -220,6 +274,11 @@ public class Cache {
         }
     }
 
+    /**
+     * Add resource to data base - local path
+     * @param url - url for resource
+     * @param path - local path
+     */
     public void addResourceToDB( String url, String path ) {
         String sql = "INSERT INTO cache VALUES ('" + path + "', '" + url + "');";
         try {

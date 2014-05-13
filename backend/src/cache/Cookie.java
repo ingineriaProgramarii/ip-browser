@@ -20,10 +20,22 @@ public class Cookie {
     private int secure;
     private Connection dbConnection;
 
+    /**
+     * Standard constructor for cookie object
+     */
     public Cookie() {
         this.setConnection();
     }
 
+    /**
+     * Custom constructor for cookie object
+     * @param domain - domain of cookie
+     * @param name - name fof cookie
+     * @param value - value for cookie
+     * @param expireDate - the date when the cookie expire
+     * @param path - path for cookie
+     * @param secure - secure option
+     */
     public Cookie( String domain, String name, String value, String expireDate, String path, int secure ) {
         this.domain = domain;
         this.name = name;
@@ -34,10 +46,16 @@ public class Cookie {
         this.setConnection();
     }
 
+    /**
+     * initializate database connection
+     */
     private void setConnection() {
         this.dbConnection = Database.getInstance().getConn();
     }
 
+    /**
+     * delete cookie from database
+     */
     public void delete() {
         String sql = "DELETE FROM cookies " +
                      "WHERE " +
@@ -54,54 +72,106 @@ public class Cookie {
         }
     }
 
+    /**
+     * get domain for this cookie
+     * @return (string) name of domain
+     */
     public String getDomain() {
         return domain;
     }
 
+    /**
+     *
+     * @return name for this cookie
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @return (string) value for this cookie
+     */
     public String getValue() {
         return value;
     }
 
+    /**
+     *
+     * @return (string) the date when this cookie expire
+     */
     public String getExpireDate() {
         return expireDate;
     }
 
+    /**
+     *
+     * @return path for this cookie
+     */
     public String getPath() {
         return path;
     }
 
+    /**
+     *
+     * @return 1 if cookie is secure 0 else
+     */
     public int getSecure() {
         return secure;
     }
 
+    /**
+     * Set name of domain for this cookie
+     * @param domain
+     */
     public void setDomain( String domain ) {
         this.domain = domain;
     }
 
+    /**
+     * setter for name
+     * @param name
+     */
     public void setName( String name ) {
         this.name = name;
     }
 
+    /**
+     * setter for value
+     * @param value
+     */
     public void setValue( String value ) {
         this.value = value;
     }
 
+    /**
+     * setter for expire date
+     * @param expireDate
+     */
     public void setExpireDate( String expireDate ) {
         this.expireDate = expireDate;
     }
 
+    /**
+     * setter for path field
+     * @param path
+     */
     public void setPath( String path ) {
         this.path = path;
     }
 
+    /**
+     * setter for secure field
+     * @param secure
+     */
     public void setSecure( int secure ) {
         this.secure = secure;
     }
 
+    /**
+     * check if this cookie exists in data base
+     * @return true or false
+     */
     public boolean exists() {
         String sql = "SELECT * FROM cookies WHERE domain = '" +
                      this.domain + "' AND path = '" +
@@ -122,6 +192,9 @@ public class Cookie {
         }
     }
 
+    /**
+     * save this cookie in database
+     */
     public void save() {
         if( this.exists() ) {
             this.update();
@@ -131,6 +204,9 @@ public class Cookie {
         }
     }
 
+    /**
+     * insert cookie in data base if does not exist
+     */
     private void insert() {
         String sql = "INSERT INTO cookies( domain, name, value, expireDate, path, secure ) " +
                      "VALUES( '" +
@@ -151,6 +227,9 @@ public class Cookie {
         }
     }
 
+    /**
+     * if cookie exist in database just update him
+     */
     private void update() {
         String sql = "UPDATE cookies " +
                      "SET value   = '" + this.value + "'," +
