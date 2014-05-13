@@ -60,10 +60,18 @@ public class Cache {
             for( Cookie c : this.cookies ) {
                 try {
                     System.out.println( "Datb : " + c.getExpireDate() );
-                    Date cookieDate = new SimpleDateFormat( "EEE, dd-MMM-yyyy HH:mm:ss z",
-                                                            Locale.ENGLISH ).parse( c.getExpireDate() );
-                    if( date1.compareTo( cookieDate ) < 0 ) {
-                        c.save();
+                    Date cookieDate;
+                    if( c.getExpireDate().length() > 0 ) {
+                        if( c.getExpireDate().indexOf( "," ) > 0 ) {
+                            cookieDate = new SimpleDateFormat( "EEE, dd-MMM-yyyy HH:mm:ss z",
+                                                               Locale.ENGLISH ).parse( c.getExpireDate() );
+                        }
+                        else {
+                            cookieDate = new SimpleDateFormat( "yyyy-mm-dd HH:mm:ss", Locale.ENGLISH ).parse( c.getExpireDate() );
+                        }
+                        if( date1.compareTo( cookieDate ) < 0 ) {
+                            c.save();
+                        }
                     }
                 }
                 catch( ParseException e ) {
@@ -103,7 +111,9 @@ public class Cache {
     }
 
     public void addHistoryItem( String name, String url ) {
-        History.add( new HistoryItem( name, new Date(), url, "" ) );
+        HistoryItem hi = new HistoryItem( name, new Date(), url, "" );
+        History.add( hi );
+        hi.save();
     }
 
     public ArrayList<HistoryItem> getHistory( HashMap<String, String> filters ) {
@@ -211,7 +221,7 @@ public class Cache {
     }
 
     public void addResourceToDB( String url, String path ) {
-        String sql = "INSERT INTO cache VALUES ('" + url + "', '" + path + "');";
+        String sql = "INSERT INTO cache VALUES ('" + path + "', '" + url + "');";
         try {
             java.sql.Statement stmt = this.dbConnection.createStatement();
             stmt.executeUpdate( sql );

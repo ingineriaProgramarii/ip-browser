@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="" />
+    <list default="true" id="a795e66c-5937-4bf5-b76c-810c37be642c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cache/browser.db" afterPath="$PROJECT_DIR$/src/cache/browser.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cache/Cache.java" afterPath="$PROJECT_DIR$/src/cache/Cache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cache/HistoryItem.java" afterPath="$PROJECT_DIR$/src/cache/HistoryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/requests/Requests.java" afterPath="$PROJECT_DIR$/src/requests/Requests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="backend.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a795e66c-5937-4bf5-b76c-810c37be642c" time="1399925126849" ignored="false" />
-    <file path="/Cache.java" changelist="a795e66c-5937-4bf5-b76c-810c37be642c" time="1399934779914" ignored="false" />
-    <file path="/Requests.java" changelist="a795e66c-5937-4bf5-b76c-810c37be642c" time="1399934234726" ignored="false" />
-    <file path="/fragment.java" changelist="a795e66c-5937-4bf5-b76c-810c37be642c" time="1399927271962" ignored="false" />
-    <file path="/Cookie.java" changelist="a795e66c-5937-4bf5-b76c-810c37be642c" time="1399931055970" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +29,6 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
-  </component>
-  <component name="DatabaseView">
-    <flatten value="false" />
-    <groupTables value="false" />
-    <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
@@ -70,23 +68,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/requests/Requests.java" line="317" class="requests.Requests" package="requests">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -99,7 +81,7 @@
       <file leaf-file-name="Database.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cache/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -108,38 +90,39 @@
       <file leaf-file-name="Cookie.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cache/Cookie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="27" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+            <state line="153" column="26" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1105">
               <folding>
-                <element signature="method#Cookie#1;class#Cookie#0" expanded="true" />
-                <element signature="method#getDomain#0;class#Cookie#0" expanded="false" />
-                <element signature="method#getName#0;class#Cookie#0" expanded="false" />
-                <element signature="method#getValue#0;class#Cookie#0" expanded="false" />
-                <element signature="method#getExpireDate#0;class#Cookie#0" expanded="false" />
-                <element signature="method#getPath#0;class#Cookie#0" expanded="false" />
-                <element signature="method#setDomain#0;class#Cookie#0" expanded="false" />
-                <element signature="method#setName#0;class#Cookie#0" expanded="false" />
-                <element signature="method#setValue#0;class#Cookie#0" expanded="false" />
-                <element signature="method#setExpireDate#0;class#Cookie#0" expanded="false" />
-                <element signature="method#setPath#0;class#Cookie#0" expanded="false" />
-                <element signature="method#insert#0;class#Cookie#0" expanded="true" />
+                <marker date="1399964562055" expanded="false" signature="884:1110" placeholder="DELETE FROM ..." />
+                <marker date="1399964562055" expanded="false" signature="2279:2462" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399964562055" expanded="false" signature="3059:3440" placeholder="INSERT INTO ..." />
+                <marker date="1399964562055" expanded="false" signature="3769:4177" placeholder="UPDATE cooki..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Cache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="83" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.6212766">
+            <state line="54" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="782">
               <folding>
-                <element signature="method#addCookie#0;class#Cache#0" expanded="true" />
-                <element signature="method#addCookie#1;class#Cache#0" expanded="true" />
-                <element signature="method#loadCookies#0;class#Cache#0" expanded="true" />
-                <element signature="method#Cache#0;class#Cache#0" expanded="true" />
-                <element signature="method#getDomainCookies#0;class#Cache#0" expanded="true" />
-                <element signature="method#resourceExists#0;class#Cache#0" expanded="true" />
-                <element signature="method#addResourceToDB#0;class#Cache#0" expanded="true" />
+                <element signature="method#addHistoryItem#0;class#Cache#0" expanded="true" />
+                <marker date="1399967554157" expanded="false" signature="925:946" placeholder="SELECT * FRO..cookies..." />
+                <marker date="1399967554157" expanded="false" signature="3273:3294" placeholder="SELECT * FRO..history..." />
+                <marker date="1399967554157" expanded="false" signature="5557:5611" placeholder="DELETE FROM ..." />
+                <marker date="1399967554157" expanded="false" signature="5974:6028" placeholder="SELECT path ..cache..." />
+                <marker date="1399967554157" expanded="false" signature="7383:7428" placeholder="SELECT * FRO..cache..." />
+                <marker date="1399967554157" expanded="false" signature="7936:7992" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="799">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,38 +130,23 @@
       <file leaf-file-name="BackEnd.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/backend/BackEnd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+            <state line="97" column="44" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.0" vertical-offset="409" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Requests.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Requests.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/requests/Requests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="393" column="30" selection-start="15471" selection-end="15471" vertical-scroll-proportion="-3.12">
+            <state line="341" column="22" selection-start="13167" selection-end="13167" vertical-scroll-proportion="0.5265823" vertical-offset="727" max-vertical-offset="2091">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Requests#0;class#Requests#0" expanded="true" />
-                <element signature="method#getResource#0;class#Requests#0" expanded="true" />
-                <element signature="method#getExtension#0;class#Requests#0" expanded="true" />
-                <element signature="method#genUUID#0;class#Requests#0" expanded="true" />
-                <element signature="method#dirExists#0;class#Requests#0" expanded="true" />
-                <element signature="method#getCookies#0;class#Requests#0" expanded="true" />
-                <element signature="method#sendGet#0;class#Requests#0" expanded="true" />
-                <element signature="method#sendPost#0;class#Requests#0" expanded="true" />
-                <element signature="e#14928#14944#0" expanded="true" />
-                <element signature="method#getDomainName#0;class#Requests#0" expanded="true" />
+                <element signature="docComment;method#setUrl#0;class#Requests#0" expanded="false" />
+                <element signature="docComment;method#getUrl#0;class#Requests#0" expanded="false" />
+                <element signature="docComment;method#setType#0;class#Requests#0" expanded="false" />
+                <element signature="docComment;method#getType#0;class#Requests#0" expanded="false" />
+                <element signature="docComment;method#getParams#0;class#Requests#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateFormat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/text/DateFormat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="356" column="0" selection-start="14189" selection-end="14189" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -186,8 +154,10 @@
       <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="55" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="15" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <folding>
+                <element signature="method#main#0;class#MainClass#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,6 +188,7 @@
         <option value="$PROJECT_DIR$/src/MainClass.java" />
         <option value="$PROJECT_DIR$/src/requests/Requests.java" />
         <option value="$PROJECT_DIR$/src/cache/Cache.java" />
+        <option value="$PROJECT_DIR$/src/cache/HistoryItem.java" />
       </list>
     </option>
   </component>
@@ -226,7 +197,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -368,7 +339,7 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.MainClass">
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
       <module name="" />
       <setting name="vmparams" value="" />
       <setting name="cmdLine" value="run-app" />
@@ -378,7 +349,7 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
@@ -393,6 +364,9 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -478,6 +452,7 @@
         <LauncherParameters>
           <option name="browserFamily" value="FIREFOX" />
           <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
         </LauncherParameters>
       </option>
@@ -502,6 +477,7 @@
       <option name="CLASS_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -510,6 +486,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -522,6 +499,7 @@
         <LauncherParameters>
           <option name="browserFamily" value="FIREFOX" />
           <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
           <option name="playerPath" value="FlashPlayerDebugger.exe" />
         </LauncherParameters>
       </option>
@@ -531,7 +509,10 @@
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
       <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -560,12 +541,20 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -574,12 +563,7 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="MainClass" type="Application" factoryName="Application">
@@ -639,6 +623,7 @@
       <workItem from="1399814658382" duration="2024000" />
       <workItem from="1399824362175" duration="410000" />
       <workItem from="1399901099188" duration="452000" />
+      <workItem from="1399964668030" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="cookie + database">
       <created>1399817731983</created>
@@ -668,16 +653,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13002000" />
+    <option name="totallyTimeSpent" value="16106000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1780303" sideWeight="0.4880546" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17749244" sideWeight="0.4880546" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -685,22 +673,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1552901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46208113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67064846" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20530303" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51194537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20468278" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22045855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -713,62 +698,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleteExpiredCookies" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="cookie + database" />
     <MESSAGE value="add cookie" />
     <MESSAGE value="getDomainCookies" />
     <MESSAGE value="deleteExpiredCookies" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleteExpiredCookies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -778,180 +715,231 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+        <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cookie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
+        <state line="153" column="27" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="3009">
           <folding>
-            <element signature="method#Cookie#1;class#Cookie#0" expanded="true" />
-            <element signature="method#getDomain#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getName#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getValue#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getExpireDate#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getPath#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setDomain#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setName#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setValue#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setExpireDate#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setPath#0;class#Cookie#0" expanded="false" />
-            <element signature="method#insert#0;class#Cookie#0" expanded="true" />
+            <marker date="1399964562055" expanded="false" signature="884:1110" placeholder="DELETE FROM ..." />
+            <marker date="1399964562055" expanded="false" signature="2279:2462" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399964562055" expanded="false" signature="3059:3440" placeholder="INSERT INTO ..." />
+            <marker date="1399964562055" expanded="false" signature="3769:4177" placeholder="UPDATE cooki..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0">
+        <state line="62" column="83" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2737">
           <folding>
-            <element signature="method#addCookie#0;class#Cache#0" expanded="true" />
-            <element signature="method#addCookie#1;class#Cache#0" expanded="true" />
-            <element signature="method#loadCookies#0;class#Cache#0" expanded="true" />
-            <element signature="method#Cache#0;class#Cache#0" expanded="true" />
-            <element signature="method#getDomainCookies#0;class#Cache#0" expanded="true" />
-            <element signature="method#resourceExists#0;class#Cache#0" expanded="true" />
-            <element signature="method#addResourceToDB#0;class#Cache#0" expanded="true" />
+            <element signature="method#addHistoryItem#0;class#Cache#0" expanded="true" />
+            <marker date="1399967554157" expanded="false" signature="925:946" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399967554157" expanded="false" signature="3273:3294" placeholder="SELECT * FRO..history..." />
+            <marker date="1399967554157" expanded="false" signature="5557:5611" placeholder="DELETE FROM ..." />
+            <marker date="1399967554157" expanded="false" signature="5974:6028" placeholder="SELECT path ..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7383:7428" placeholder="SELECT * FRO..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7936:7992" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backend/BackEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="2006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requests/Requests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="393" column="30" selection-start="15471" selection-end="15471" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="7327">
+          <folding>
+            <element signature="docComment;method#setUrl#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getUrl#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#setType#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getType#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getParams#0;class#Requests#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+        <state line="18" column="55" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="476">
+          <folding>
+            <element signature="method#main#0;class#MainClass#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="method#main#0;class#MainClass#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <marker date="1399964562055" expanded="false" signature="884:1110" placeholder="DELETE FROM ..." />
+            <marker date="1399964562055" expanded="false" signature="2279:2462" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399964562055" expanded="false" signature="3059:3440" placeholder="INSERT INTO ..." />
+            <marker date="1399964562055" expanded="false" signature="3769:4177" placeholder="UPDATE cooki..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="17" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="method#addHistoryItem#0;class#Cache#0" expanded="true" />
+            <marker date="1399967554157" expanded="false" signature="925:946" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399967554157" expanded="false" signature="3273:3294" placeholder="SELECT * FRO..history..." />
+            <marker date="1399967554157" expanded="false" signature="5557:5611" placeholder="DELETE FROM ..." />
+            <marker date="1399967554157" expanded="false" signature="5974:6028" placeholder="SELECT path ..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7383:7428" placeholder="SELECT * FRO..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7936:7992" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding>
+            <element signature="method#main#0;class#MainClass#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.0469208" />
+        <state line="3" column="40" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.0469208" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="5" selection-start="391" selection-end="391" vertical-scroll-proportion="0.6598891">
-          <folding>
-            <element signature="method#HistoryItem#0;class#HistoryItem#0" expanded="true" />
-            <element signature="method#HistoryItem#1;class#HistoryItem#0" expanded="true" />
-            <element signature="method#delete#0;class#HistoryItem#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e7c803a/f74f87e5-49c2-44bd-8ab3-e247d55f324d/..cookies">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e7c803a/f74f87e5-49c2-44bd-8ab3-e247d55f324d/..cache">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="55" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="356" column="0" selection-start="14189" selection-end="14189" vertical-scroll-proportion="0.0">
+        <state line="9" column="23" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backend/BackEnd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+        <state line="97" column="44" selection-start="2520" selection-end="2520" vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/6e7b8faa/f74f87e5-49c2-44bd-8ab3-e247d55f324d/..cookies">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cookie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="27" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+        <state line="153" column="26" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="1105">
           <folding>
-            <element signature="method#Cookie#1;class#Cookie#0" expanded="true" />
-            <element signature="method#getDomain#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getName#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getValue#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getExpireDate#0;class#Cookie#0" expanded="false" />
-            <element signature="method#getPath#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setDomain#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setName#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setValue#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setExpireDate#0;class#Cookie#0" expanded="false" />
-            <element signature="method#setPath#0;class#Cookie#0" expanded="false" />
-            <element signature="method#insert#0;class#Cookie#0" expanded="true" />
+            <marker date="1399964562055" expanded="false" signature="884:1110" placeholder="DELETE FROM ..." />
+            <marker date="1399964562055" expanded="false" signature="2279:2462" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399964562055" expanded="false" signature="3059:3440" placeholder="INSERT INTO ..." />
+            <marker date="1399964562055" expanded="false" signature="3769:4177" placeholder="UPDATE cooki..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/requests/Requests.java">
+    <entry file="dbDummy://dbtable:/6e7b8faa/f74f87e5-49c2-44bd-8ab3-e247d55f324d/..history">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/6e7b8faa/f74f87e5-49c2-44bd-8ab3-e247d55f324d/..cache">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="30" selection-start="15471" selection-end="15471" vertical-scroll-proportion="-3.12">
+        <state line="403" column="7" selection-start="14700" selection-end="14700" vertical-scroll-proportion="0.33164558" vertical-offset="4544" max-vertical-offset="10353">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Requests#0;class#Requests#0" expanded="true" />
-            <element signature="method#getResource#0;class#Requests#0" expanded="true" />
-            <element signature="method#getExtension#0;class#Requests#0" expanded="true" />
-            <element signature="method#genUUID#0;class#Requests#0" expanded="true" />
-            <element signature="method#dirExists#0;class#Requests#0" expanded="true" />
-            <element signature="method#getCookies#0;class#Requests#0" expanded="true" />
-            <element signature="method#sendGet#0;class#Requests#0" expanded="true" />
-            <element signature="method#sendPost#0;class#Requests#0" expanded="true" />
-            <element signature="e#14928#14944#0" expanded="true" />
-            <element signature="method#getDomainName#0;class#Requests#0" expanded="true" />
+            <element signature="method#add#0;class#ArrayList#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="83" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.6212766">
+        <state line="54" column="0" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="782">
           <folding>
-            <element signature="method#addCookie#0;class#Cache#0" expanded="true" />
-            <element signature="method#addCookie#1;class#Cache#0" expanded="true" />
-            <element signature="method#loadCookies#0;class#Cache#0" expanded="true" />
-            <element signature="method#Cache#0;class#Cache#0" expanded="true" />
-            <element signature="method#getDomainCookies#0;class#Cache#0" expanded="true" />
-            <element signature="method#resourceExists#0;class#Cache#0" expanded="true" />
-            <element signature="method#addResourceToDB#0;class#Cache#0" expanded="true" />
+            <element signature="method#addHistoryItem#0;class#Cache#0" expanded="true" />
+            <marker date="1399967554157" expanded="false" signature="925:946" placeholder="SELECT * FRO..cookies..." />
+            <marker date="1399967554157" expanded="false" signature="3273:3294" placeholder="SELECT * FRO..history..." />
+            <marker date="1399967554157" expanded="false" signature="5557:5611" placeholder="DELETE FROM ..." />
+            <marker date="1399967554157" expanded="false" signature="5974:6028" placeholder="SELECT path ..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7383:7428" placeholder="SELECT * FRO..cache..." />
+            <marker date="1399967554157" expanded="false" signature="7936:7992" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/HistoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding>
+            <element signature="method#main#0;class#MainClass#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/requests/Requests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="341" column="22" selection-start="13167" selection-end="13167" vertical-scroll-proportion="0.5265823" vertical-offset="727" max-vertical-offset="2091">
+          <folding>
+            <element signature="docComment;method#setUrl#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getUrl#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#setType#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getType#0;class#Requests#0" expanded="false" />
+            <element signature="docComment;method#getParams#0;class#Requests#0" expanded="false" />
           </folding>
         </state>
       </provider>

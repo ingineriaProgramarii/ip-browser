@@ -29,22 +29,42 @@ public class Requests {
 
     private Cache cache;
 
+    /**
+     *
+     * @param link
+     */
     public void setUrl( String link ) {
         this.url = link;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUrl() {
         return this.url;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType( String type ) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, String> getParams() {
         return params;
     }
@@ -280,7 +300,7 @@ public class Requests {
     public void getCookies( List<String> headers ) {
         for( String cookie : headers ) {
             String[] sc = cookie.split( ";" );
-            Cookie c = new Cookie();
+            Cookie c = new Cookie("", "", "", "", "", 0);
             String[] nameValue = sc[0].split( "=", 2 );
             c.setName( nameValue[0].trim() );
             c.setValue( nameValue[1].trim() );
@@ -294,7 +314,6 @@ public class Requests {
                     String key = nameValue[0].trim();
 
                     String value = nameValue[1].trim();
-                    System.out.println(value);
                     switch( key.toLowerCase() ) {
                         case "path":
                             c.setPath( value );
@@ -349,6 +368,9 @@ public class Requests {
             System.out.println( con.getHeaderFields() );
 
             this.getCookies( con.getHeaderFields().get( "Set-Cookie" ) );
+
+            this.cache.addHistoryItem( this.url, this.url );
+
             this.cache.saveCookies();
             domTree = Jsoup.parse( response.toString());
             //System.out.println("DOM : " + domTree);

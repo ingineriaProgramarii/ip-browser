@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="3849088446">
-    <data-source source="LOCAL" name="SQLite - browser.db" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="f74f87e5-49c2-44bd-8ab3-e247d55f324d">
+    <data-source source="LOCAL" name="SQLite - browser.db" uuid="f74f87e5-49c2-44bd-8ab3-e247d55f324d">
+      <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/cache/browser.db</jdbc-url>
