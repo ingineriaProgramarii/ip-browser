@@ -1,113 +1,136 @@
 package browserAcces;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-
+import java.util.ArrayList;
 import javax.swing.JApplet;
 
-import audioplayer.AudioPlayer;
-
+/**
+ * Clasa de baza PluginManager de unde se pot accesa plugin-urile 
+ * @author AlexState
+ *
+ */
 public class PluginManager extends JApplet
 {
-	public String name;
-	public File[] plugins;
-	public File pluginsDir;
-	public String namePlugin = "";
-	public String[] namesPlugin = null;
-
-	public PluginManager(String name)
+	private int baseId;
+	
+	ArrayList<FlashPlayer> loadedFlashPlayers;
+	
+/**
+ * Constructorul clasei PluginManager
+ */
+	public PluginManager()
 	{
-		this.name = name;
+		loadedFlashPlayers = new ArrayList<>();
 	}
 
 	/**
-	 * Metoda care are rolul de a adauga un plugin in lista creata de
-	 * PluginManager.
-	 **/
-	private void loadPlugins()
+	 * creeaza o instanta noua de flashPlayer
+	 * @return instanta nou creata sau null daca este aruncata vreo exceptie
+	 */
+	public FlashPlayer createNewFlashPlayer()
 	{
-		try
+		FlashPlayer flashPlayer = null;
+		
+		try 
 		{
-			AudioPlayer audioP = new AudioPlayer();
-			URL f = new URL("http://www.nch.com.au/acm/11kulaw.wav");
-			audioP.loadContent(f);
-
-		} catch (Exception e)
-		{
-			throw new RuntimeException(e);
+			flashPlayer = new FlashPlayer(getUniqueId(), this);
+			
+			loadedFlashPlayers.add(flashPlayer);
+			
+			return flashPlayer;
+		} 
+		
+		catch (ExceptionInInitializerError | ExceptionIdIsNotUnique e)
+		{			
+			e.printStackTrace();
 		}
-
+		
+		return flashPlayer;
 	}
-
+	
 	/**
-	 * Metoda care are rolul de a elimina toate plugin-urile existente din
-	 * PluginManager
-	 **/
-	public void clear()
+	 * sterger referintele din acest pluginManager pt un flashPlayer cu id-ul dat ca parametru
+	 * @param instanceId id-ul flashPlayerului de 'eliberat'
+	 */
+	public void clearFlashPlayerRefferences(String instanceId)
 	{
-		this.plugins = null;
-		this.namesPlugin = null;
-		System.out.print("S-a eliberat lista de plugin");
-	}
-
-	public File getPlugin(String namePlugin)
-	{
-		try
+		for(int i = 0;i < loadedFlashPlayers.size();i++)
 		{
-			for (int i = 0; i < namesPlugin.length; i++)
-				if (namesPlugin[i].equals(namePlugin))
-					return plugins[i];
-		} catch (Exception e)
-		{
-			throw new RuntimeException(e);
+			if(loadedFlashPlayers.get(i).getInstanceId().equals(instanceId))
+			{
+				loadedFlashPlayers.get(i).onDestroy();
+				
+				loadedFlashPlayers.remove(i);
+				
+				return;
+			}
 		}
-		return null;
 	}
-
+	
+	/**
+ 	* Metoda pentru a selecta activarea unui anumit plugin(probabil va fi stearsa, nu insistati cu testarea)
+ 	* @param pluginType
+ 	* @param path
+ 	*/
 	public void execPlugin(String pluginType, String path)
 	{
-		try
-		{
 			switch (pluginType)
 			{
 				case "audioPlayer":
 				{
-					AudioPlayer audioP = new AudioPlayer();
+					//this.audioP = new AudioPlayer();
 	
-					URL f;
-					f = new URL("http://www.nch.com.au/acm/11kulaw.wav");
-					audioP.loadContent(f);
+					//URL f;
+					//f = new URL(path);
+					//audioP.loadContent(f);
 	
 					break;
 				}
 				case "pdfViewer":
 				{
-					
+					//this.pdfViewer=new PDFViewerApplet();
+					//this.pdfViewer.init();
+					//this.pdfViewer.start(path);
 					break;
 				}
 				case "flashPlayer":
 				{
-	
+					
+					
 					break;
 				}
 
 			}
-		}
-
-		catch (MalformedURLException e)
+	}
+	
+	/**
+	 * genereaza un id unic pt a fi folosit in crearea unui plugin nou
+	 * @return id-ul in format String
+	 */
+	private String getUniqueId()
+	{
+		return ++baseId + "";
+	}
+	
+	/**
+	 * testeaza daca un id este unic
+	 * @param id id-ul de testat
+	 * @return true daca id-ul nu exista in listele de pluginuri care ruleaza
+	 */
+	public boolean idIsUnique(String id)
+	{
+		for(int i = 0;i < loadedFlashPlayers.size();i++)
 		{
-			e.printStackTrace();
+			if(loadedFlashPlayers.get(i).getInstanceId().equals(id))
+			{
+				return false;
+			}
 		}
+		
+		return true;
 	}
 
 	public static void main(String[] args)
 	{
-		PluginManager plugManager = new PluginManager("DSFSD");
-
-		plugManager.execPlugin("pdfViewer",
-				"http://www.nch.com.au/acm/11kulaw.wav");
-
-		System.out.println("done");
+		
 	}
 }

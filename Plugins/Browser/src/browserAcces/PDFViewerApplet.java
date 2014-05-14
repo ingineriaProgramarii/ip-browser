@@ -90,7 +90,7 @@ public class PDFViewerApplet extends JApplet
 		}
 	}
 	
-	public void start ()
+	public void start (String url)
 	{
 	    // Set open button visibility according to the BrowseAllowed flag.
 	    getPDFViewerBean().getToolbar().getjbOpen().setVisible (toBoolean (getParameter("BrowseAllowed")));
@@ -118,7 +118,7 @@ public class PDFViewerApplet extends JApplet
 	    final String urlString = getParameter("url");
 		if (urlString != null && urlString.trim ().length() > 0)
 		{
-		    loadPDF("c:/users/lawrence/desktop/Java_1.pdf");
+		    loadPDF(url);
         }
 	}
 	

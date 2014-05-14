@@ -8,8 +8,6 @@
 package flashplayer;
 
 import java.awt.BorderLayout;
-import java.io.File;
-
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -25,6 +23,8 @@ public class SimpleFlashExample
 		JFlashPlayer flashPlayer = new JFlashPlayer();
 		flashPlayer.load(SimpleFlashExample.class, "FlashPlayerInteractions.swf");
 		return flashPlayer;
+		
+		//@me test cu flashPlayer.java
 	}
 
 	public static void main(String[] args)

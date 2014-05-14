@@ -1,17 +1,19 @@
 package browserAcces;
-import java.io.IOException;
-import java.net.URL;
 
+import java.io.IOException;
+import javax.swing.JComponent;
+
+/**
+ * clasa pt un plugin specific(nu testati)
+ *
+ */
 public class PluginBase extends Thread implements PluginInterface
 {
+	protected String instanceId;
+	protected PluginManager manager;
+	
 	@Override
 	public void onStart() throws IOException
-	{
-		
-	}
-
-	@Override
-	public void onPause()
 	{
 		
 	}
@@ -20,12 +22,6 @@ public class PluginBase extends Thread implements PluginInterface
 	public void onDestroy()
 	{
 		super.interrupt();
-	}
-
-	@Override
-	public void onResume()
-	{
-		
 	}
 	
 	@Override
@@ -43,7 +39,7 @@ public class PluginBase extends Thread implements PluginInterface
 	}
 
 	@Override
-	public void loadContent(URL path)
+	public void loadContent(String path)
 	{
 		
 	}
@@ -64,5 +60,23 @@ public class PluginBase extends Thread implements PluginInterface
 	public void resumeContent()
 	{
 		
+	}
+
+	@Override
+	public JComponent getSwingComponent() 
+	{
+		return null;
+	}
+	
+	@Override
+	public String getInstanceId()
+	{
+		return instanceId;
+	}
+
+	@Override
+	public PluginManager getManager() 
+	{
+		return manager;
 	}
 }
