@@ -100,6 +100,10 @@ public class BackEnd {
         return d;
     }
 
+    public String getResourcePath(String url) {
+        return this.cache.resourceExists( url );
+    }
+
   /*  public Boolean makeRequest( String type, String url, String params ) {
         return null;
     }*/
