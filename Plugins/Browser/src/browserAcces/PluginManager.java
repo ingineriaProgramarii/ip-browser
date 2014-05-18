@@ -1,7 +1,14 @@
 package browserAcces;
 
+import java.awt.BorderLayout;
+import java.io.File;
 import java.util.ArrayList;
+
 import javax.swing.JApplet;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+import audioPlugin.AudioPluginControler;
 
 /**
  * Clasa de baza PluginManager de unde se pot accesa plugin-urile 
@@ -13,6 +20,7 @@ public class PluginManager extends JApplet
 	private int baseId;
 	
 	ArrayList<FlashPlayer> loadedFlashPlayers;
+	ArrayList<AudioPlayer> loadedAudioPlugins;
 	
 /**
  * Constructorul clasei PluginManager
@@ -20,6 +28,7 @@ public class PluginManager extends JApplet
 	public PluginManager()
 	{
 		loadedFlashPlayers = new ArrayList<>();
+		loadedAudioPlugins = new ArrayList<AudioPlayer>();
 	}
 
 	/**
@@ -48,7 +57,31 @@ public class PluginManager extends JApplet
 	}
 	
 	/**
-	 * sterger referintele din acest pluginManager pt un flashPlayer cu id-ul dat ca parametru
+	 * 
+	 * @param path
+	 * @return
+	 */
+	public AudioPlayer createNewAudioPlugin(String path)
+	{
+		AudioPlayer audio = null;
+		
+		try 
+		{
+			audio = new AudioPlayer(getUniqueId(), path, this);
+			
+			loadedAudioPlugins.add(audio);
+		} 
+		
+		catch (ExceptionIdIsNotUnique e)
+		{
+			e.printStackTrace();
+		}
+		
+		return audio;
+	}
+	
+	/**
+	 * sterge referintele din acest pluginManager pt un flashPlayer cu id-ul dat ca parametru
 	 * @param instanceId id-ul flashPlayerului de 'eliberat'
 	 */
 	public void clearFlashPlayerRefferences(String instanceId)
@@ -60,6 +93,21 @@ public class PluginManager extends JApplet
 				loadedFlashPlayers.get(i).onDestroy();
 				
 				loadedFlashPlayers.remove(i);
+				
+				return;
+			}
+		}
+	}
+	
+	public void clearAudioPluginRefferences(String instanceId)
+	{
+		for(int i = 0;i<loadedAudioPlugins.size(); i++)
+		{
+			if(loadedAudioPlugins.get(i).getInstanceId().equals(instanceId))
+			{
+				loadedAudioPlugins.get(i).onDestroy();
+				
+				loadedAudioPlugins.remove(i);
 				
 				return;
 			}
@@ -131,6 +179,22 @@ public class PluginManager extends JApplet
 
 	public static void main(String[] args)
 	{
+		final PluginManager maager = new PluginManager();
 		
+		SwingUtilities.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				JFrame frame = new JFrame("");
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame.getContentPane().add(maager.createNewAudioPlugin(new File(
+								"resources/audioPlayer/alarm.wav")
+								.getAbsolutePath()).getSwingComponent(), BorderLayout.CENTER);
+				frame.setSize(800, 600);
+				frame.setLocationByPlatform(true);
+				frame.setVisible(true);
+				frame.pack();
+			}
+		});
 	}
 }
