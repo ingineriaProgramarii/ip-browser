@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+
+#ibu_mobile_footer {
+	padding:10px 0px 10px 0px;
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
+	background-color:#ffffff;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/bg_mobile.gif);
+	background-repeat:repeat-x;
+	background-position:center top;
+}
+
+.ibu_footer_title {
+	padding:0px 5px 5px 5px;
+	margin:0px;
+	font-size:12px;
+	font-weight:bold;
+	color:#000000;
+	text-align:left;
+	text-transform:uppercase
+}
+
+.ibu_footer_stiri {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/stiri.jpg);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+}
+
+.ibu_footer_incont {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/incont.jpg);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+}
+
+.ibu_footer_perfecte {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/perfecte.jpg);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+}
+
+.ibu_footer_wfan {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/wfan.jpg);
+	background-repeat:no-repeat;
+	background-position:right 12px;
+}
+
+.ibu_footer_sport {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/sport.jpg);
+	background-repeat:no-repeat;
+	background-position:right 9px;
+}
+
+.ibu_footer_crimetime {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/crimetime.jpg);
+	background-repeat:no-repeat;
+	background-position:right 5px;
+}
+
+.ibu_footer_procinema {
+	width:147px;
+	float:left;
+	text-align:left;
+	padding:8px 0px 5px 3px;
+	margin:0px 5px 0px 5px;
+	border-bottom:solid 1px #cccccc;
+	background-image:url(http://web3.protv.ro/assets/ibu/footer/images/procinema.jpg);
+	background-repeat:no-repeat;
+	background-position:right 9px;
+}
+
+a.ibu_footer_link {
+	font-size:14px;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.ibu_footer_link:hover {
+	font-size:14px;
+	font-weight:normal;
+	text-decoration:underline;
+}
