@@ -1,0 +1,3 @@
+flashPlayer 0
+audioPlayer 0
+pdfPlugin 0

@@ -5,7 +5,7 @@
 	<classpathentry kind="lib" path="lib/jl1.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/mp3spi-1.9.5-1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/tritonus_share.jar"/>
-	<classpathentry kind="lib" path="lib/jPDFViewer.jar"/>
 	<classpathentry kind="lib" path="lib/flashPlayer.jar"/>
+	<classpathentry kind="lib" path="lib/jPDFViewer.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -64,6 +64,9 @@ public class AudioPlayer extends PluginBase
 	@Override
 	public void onDestroy()
 	{
-		audioPlugin.pause();
+		if(audioPlugin != null)
+		{
+			audioPlugin.pause();
+		}
 	}
 }

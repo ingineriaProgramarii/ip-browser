@@ -195,14 +195,10 @@ public class AudioPluginControler extends JPanel
 
 		try
 		{
-			imgPlay = ImageIO.read(new File(
-					"resources/audioPlayer/play_button.png"));
-			imgPause = ImageIO.read(new File(
-					"resources/audioPlayer/pause_button.png"));
-			imgVUp = ImageIO.read(new File(
-					"resources/audioPlayer/volume_up.png"));
-			imgVDn = ImageIO.read(new File(
-					"resources/audioPlayer/volume_down.png"));
+			imgPlay = ImageIO.read(new File("resources/audioPlayer/play_button.png"));
+			imgPause = ImageIO.read(new File("resources/audioPlayer/pause_button.png"));
+			imgVUp = ImageIO.read(new File("resources/audioPlayer/volume_up.png"));
+			imgVDn = ImageIO.read(new File("resources/audioPlayer/volume_down.png"));
 
 			core = new AudioPluginCore(path, volume);
 
@@ -211,14 +207,10 @@ public class AudioPluginControler extends JPanel
 			e.printStackTrace();
 		}
 
-		playImage = new ImageIcon(imgPlay.getScaledInstance(32, 32,
-				Image.SCALE_SMOOTH));
-		pauseImage = new ImageIcon(imgPause.getScaledInstance(32, 32,
-				Image.SCALE_SMOOTH));
-		volUpImage = new ImageIcon(imgVUp.getScaledInstance(32, 19,
-				Image.SCALE_SMOOTH));
-		volDownImage = new ImageIcon(imgVDn.getScaledInstance(32, 19,
-				Image.SCALE_SMOOTH));
+		playImage = new ImageIcon(imgPlay.getScaledInstance(32, 32, Image.SCALE_SMOOTH));
+		pauseImage = new ImageIcon(imgPause.getScaledInstance(32, 32, Image.SCALE_SMOOTH));
+		volUpImage = new ImageIcon(imgVUp.getScaledInstance(32, 19,	Image.SCALE_SMOOTH));
+		volDownImage = new ImageIcon(imgVDn.getScaledInstance(32, 19, Image.SCALE_SMOOTH));
 
 		volumePanel = new JPanel();
 		volumePanel.setLayout(new BoxLayout(volumePanel, BoxLayout.Y_AXIS));

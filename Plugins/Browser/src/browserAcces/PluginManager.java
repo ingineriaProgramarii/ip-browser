@@ -2,184 +2,203 @@ package browserAcces;
 
 import java.awt.BorderLayout;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+import com.qoppa.pdf.PDFException;
+
 import audioPlugin.AudioPluginControler;
 
 /**
- * Clasa de baza PluginManager de unde se pot accesa plugin-urile 
+ * Clasa de baza PluginManager de unde se pot accesa plugin-urile
+ * 
  * @author AlexState
- *
+ * 
  */
 public class PluginManager extends JApplet
 {
 	private int baseId;
-	
+
+	public SetupLoader dataLoader;
+
 	ArrayList<FlashPlayer> loadedFlashPlayers;
 	ArrayList<AudioPlayer> loadedAudioPlugins;
-	
-/**
- * Constructorul clasei PluginManager
- */
+	ArrayList<PdfPlugin> loadedPdfPlugins;
+
+	/**
+	 * Constructorul clasei PluginManager
+	 */
 	public PluginManager()
 	{
+		dataLoader = new SetupLoader();
+
+		dataLoader.loadData();
+
 		loadedFlashPlayers = new ArrayList<>();
 		loadedAudioPlugins = new ArrayList<AudioPlayer>();
+		loadedPdfPlugins = new ArrayList<PdfPlugin>();
 	}
 
 	/**
 	 * creeaza o instanta noua de flashPlayer
+	 * 
 	 * @return instanta nou creata sau null daca este aruncata vreo exceptie
+	 * @throws ExceptionIdIsNotUnique 
+	 * @throws ExceptionInInitializerError 
+	 * @throws ExceptionPluginDisabled 
 	 */
-	public FlashPlayer createNewFlashPlayer()
+	public FlashPlayer createNewFlashPlayer() throws ExceptionInInitializerError, ExceptionIdIsNotUnique, ExceptionPluginDisabled
 	{
 		FlashPlayer flashPlayer = null;
-		
-		try 
+
+		if(dataLoader.getFlashPlayerIsEnabled())
 		{
 			flashPlayer = new FlashPlayer(getUniqueId(), this);
-			
+
 			loadedFlashPlayers.add(flashPlayer);
-			
+
 			return flashPlayer;
-		} 
-		
-		catch (ExceptionInInitializerError | ExceptionIdIsNotUnique e)
-		{			
-			e.printStackTrace();
 		}
-		
-		return flashPlayer;
+		else
+		{
+			throw new ExceptionPluginDisabled();
+		}
 	}
-	
+
 	/**
 	 * 
 	 * @param path
 	 * @return
+	 * @throws ExceptionPluginDisabled 
+	 * @throws ExceptionIdIsNotUnique 
 	 */
-	public AudioPlayer createNewAudioPlugin(String path)
+	public AudioPlayer createNewAudioPlugin(String path) throws ExceptionPluginDisabled, ExceptionIdIsNotUnique
 	{
 		AudioPlayer audio = null;
-		
-		try 
+
+		if (dataLoader.getAudioPluginIsEnabled())
 		{
 			audio = new AudioPlayer(getUniqueId(), path, this);
-			
+
 			loadedAudioPlugins.add(audio);
-		} 
-		
-		catch (ExceptionIdIsNotUnique e)
-		{
-			e.printStackTrace();
 		}
-		
+		else
+		{
+			throw new ExceptionPluginDisabled();
+		}
+
 		return audio;
 	}
 	
+	public PdfPlugin createNewPdfPlugin(String path) throws FileNotFoundException, ExceptionIdIsNotUnique, PDFException, ExceptionPluginDisabled
+	{
+		PdfPlugin pdfPlugin = null;
+		
+		if(dataLoader.getPdfPluginIsEnabled())
+		{
+			pdfPlugin = new PdfPlugin(getUniqueId(), path, this);
+			
+			loadedPdfPlugins.add(pdfPlugin);
+		}
+		else
+		{
+			throw new ExceptionPluginDisabled();
+		}
+		
+		return pdfPlugin;
+	}
+
 	/**
-	 * sterge referintele din acest pluginManager pt un flashPlayer cu id-ul dat ca parametru
-	 * @param instanceId id-ul flashPlayerului de 'eliberat'
+	 * sterge referintele din acest pluginManager pt un flashPlayer cu id-ul dat
+	 * ca parametru
+	 * 
+	 * @param instanceId
+	 *            id-ul flashPlayerului de 'eliberat'
 	 */
 	public void clearFlashPlayerRefferences(String instanceId)
 	{
-		for(int i = 0;i < loadedFlashPlayers.size();i++)
+		for (int i = 0; i < loadedFlashPlayers.size(); i++)
 		{
-			if(loadedFlashPlayers.get(i).getInstanceId().equals(instanceId))
+			if (loadedFlashPlayers.get(i).getInstanceId().equals(instanceId))
 			{
 				loadedFlashPlayers.get(i).onDestroy();
-				
+
 				loadedFlashPlayers.remove(i);
-				
+
 				return;
 			}
 		}
 	}
-	
+
 	public void clearAudioPluginRefferences(String instanceId)
 	{
-		for(int i = 0;i<loadedAudioPlugins.size(); i++)
+		for (int i = 0; i < loadedAudioPlugins.size(); i++)
 		{
-			if(loadedAudioPlugins.get(i).getInstanceId().equals(instanceId))
+			if (loadedAudioPlugins.get(i).getInstanceId().equals(instanceId))
 			{
 				loadedAudioPlugins.get(i).onDestroy();
-				
+
 				loadedAudioPlugins.remove(i);
-				
+
 				return;
 			}
 		}
 	}
 	
-	/**
- 	* Metoda pentru a selecta activarea unui anumit plugin(probabil va fi stearsa, nu insistati cu testarea)
- 	* @param pluginType
- 	* @param path
- 	*/
-	public void execPlugin(String pluginType, String path)
+	public void clearPdfPluginRefferences(String instanceId)
 	{
-			switch (pluginType)
+		for(int i = 0;i < loadedPdfPlugins.size();i++)
+		{
+			if(loadedPdfPlugins.get(i).getInstanceId().equals(instanceId))
 			{
-				case "audioPlayer":
-				{
-					//this.audioP = new AudioPlayer();
-	
-					//URL f;
-					//f = new URL(path);
-					//audioP.loadContent(f);
-	
-					break;
-				}
-				case "pdfViewer":
-				{
-					//this.pdfViewer=new PDFViewerApplet();
-					//this.pdfViewer.init();
-					//this.pdfViewer.start(path);
-					break;
-				}
-				case "flashPlayer":
-				{
-					
-					
-					break;
-				}
-
+				loadedPdfPlugins.get(i).onDestroy();
+				
+				loadedPdfPlugins.remove(i);
+				
+				return;
 			}
+		}
 	}
-	
+
 	/**
 	 * genereaza un id unic pt a fi folosit in crearea unui plugin nou
+	 * 
 	 * @return id-ul in format String
 	 */
 	private String getUniqueId()
 	{
 		return ++baseId + "";
 	}
-	
+
 	/**
 	 * testeaza daca un id este unic
-	 * @param id id-ul de testat
+	 * 
+	 * @param id
+	 *            id-ul de testat
 	 * @return true daca id-ul nu exista in listele de pluginuri care ruleaza
 	 */
 	public boolean idIsUnique(String id)
 	{
-		for(int i = 0;i < loadedFlashPlayers.size();i++)
+		for (int i = 0; i < loadedFlashPlayers.size(); i++)
 		{
-			if(loadedFlashPlayers.get(i).getInstanceId().equals(id))
+			if (loadedFlashPlayers.get(i).getInstanceId().equals(id))
 			{
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
 
 	public static void main(String[] args)
 	{
 		final PluginManager maager = new PluginManager();
+
+		maager.dataLoader.setPdfPluginIsEnabled(true);
 		
 		SwingUtilities.invokeLater(new Runnable()
 		{
@@ -187,9 +206,31 @@ public class PluginManager extends JApplet
 			{
 				JFrame frame = new JFrame("");
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				frame.getContentPane().add(maager.createNewAudioPlugin(new File(
-								"resources/audioPlayer/alarm.wav")
-								.getAbsolutePath()).getSwingComponent(), BorderLayout.CENTER);
+				
+				try
+				{
+					try
+					{
+						frame.getContentPane().add(maager.createNewPdfPlugin("c:/users/lawrence/desktop/Java_1.pdf").getSwingComponent(),BorderLayout.CENTER);
+					} catch (FileNotFoundException e)
+					{
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (PDFException e)
+					{
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} catch (ExceptionPluginDisabled e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExceptionIdIsNotUnique e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 				frame.setSize(800, 600);
 				frame.setLocationByPlatform(true);
 				frame.setVisible(true);
