@@ -47,23 +47,24 @@ public class PluginManager extends JApplet
 	 * creeaza o instanta noua de flashPlayer
 	 * 
 	 * @return instanta nou creata sau null daca este aruncata vreo exceptie
-	 * @throws ExceptionIdIsNotUnique 
-	 * @throws ExceptionInInitializerError 
-	 * @throws ExceptionPluginDisabled 
+	 * @throws ExceptionIdIsNotUnique
+	 * @throws ExceptionInInitializerError
+	 * @throws ExceptionPluginDisabled
 	 */
-	public FlashPlayer createNewFlashPlayer() throws ExceptionInInitializerError, ExceptionIdIsNotUnique, ExceptionPluginDisabled
+	public FlashPlayer createNewFlashPlayer(String path) throws ExceptionInInitializerError, ExceptionIdIsNotUnique, ExceptionPluginDisabled
 	{
 		FlashPlayer flashPlayer = null;
 
-		if(dataLoader.getFlashPlayerIsEnabled())
+		if (dataLoader.getFlashPlayerIsEnabled())
 		{
 			flashPlayer = new FlashPlayer(getUniqueId(), this);
 
 			loadedFlashPlayers.add(flashPlayer);
 
+			flashPlayer.loadContent(path);
+			
 			return flashPlayer;
-		}
-		else
+		} else
 		{
 			throw new ExceptionPluginDisabled();
 		}
@@ -73,10 +74,11 @@ public class PluginManager extends JApplet
 	 * 
 	 * @param path
 	 * @return
-	 * @throws ExceptionPluginDisabled 
-	 * @throws ExceptionIdIsNotUnique 
+	 * @throws ExceptionPluginDisabled
+	 * @throws ExceptionIdIsNotUnique
 	 */
-	public AudioPlayer createNewAudioPlugin(String path) throws ExceptionPluginDisabled, ExceptionIdIsNotUnique
+	public AudioPlayer createNewAudioPlugin(String path)
+			throws ExceptionPluginDisabled, ExceptionIdIsNotUnique
 	{
 		AudioPlayer audio = null;
 
@@ -85,30 +87,28 @@ public class PluginManager extends JApplet
 			audio = new AudioPlayer(getUniqueId(), path, this);
 
 			loadedAudioPlugins.add(audio);
-		}
-		else
+		} else
 		{
 			throw new ExceptionPluginDisabled();
 		}
 
 		return audio;
 	}
-	
-	public PdfPlugin createNewPdfPlugin(String path) throws FileNotFoundException, ExceptionIdIsNotUnique, PDFException, ExceptionPluginDisabled
+
+	public PdfPlugin createNewPdfPlugin(String path) throws FileNotFoundException, ExceptionIdIsNotUnique, PDFException,	ExceptionPluginDisabled
 	{
 		PdfPlugin pdfPlugin = null;
-		
-		if(dataLoader.getPdfPluginIsEnabled())
+
+		if (dataLoader.getPdfPluginIsEnabled())
 		{
 			pdfPlugin = new PdfPlugin(getUniqueId(), path, this);
-			
+
 			loadedPdfPlugins.add(pdfPlugin);
-		}
-		else
+		} else
 		{
 			throw new ExceptionPluginDisabled();
 		}
-		
+
 		return pdfPlugin;
 	}
 
@@ -148,17 +148,17 @@ public class PluginManager extends JApplet
 			}
 		}
 	}
-	
+
 	public void clearPdfPluginRefferences(String instanceId)
 	{
-		for(int i = 0;i < loadedPdfPlugins.size();i++)
+		for (int i = 0; i < loadedPdfPlugins.size(); i++)
 		{
-			if(loadedPdfPlugins.get(i).getInstanceId().equals(instanceId))
+			if (loadedPdfPlugins.get(i).getInstanceId().equals(instanceId))
 			{
 				loadedPdfPlugins.get(i).onDestroy();
-				
+
 				loadedPdfPlugins.remove(i);
-				
+
 				return;
 			}
 		}
@@ -199,38 +199,26 @@ public class PluginManager extends JApplet
 		final PluginManager maager = new PluginManager();
 
 		maager.dataLoader.setPdfPluginIsEnabled(true);
-		
+
 		SwingUtilities.invokeLater(new Runnable()
 		{
 			public void run()
 			{
 				JFrame frame = new JFrame("");
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				
+
 				try
 				{
-					try
-					{
-						frame.getContentPane().add(maager.createNewPdfPlugin("c:/users/lawrence/desktop/Java_1.pdf").getSwingComponent(),BorderLayout.CENTER);
-					} catch (FileNotFoundException e)
-					{
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (PDFException e)
-					{
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				} catch (ExceptionPluginDisabled e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (ExceptionIdIsNotUnique e)
+					frame.getContentPane().add(maager.createNewFlashPlayer("https://www.youtube.com/v/3fDZXQImlAA").getSwingComponent());
+				}
+				
+				catch (ExceptionInInitializerError | ExceptionIdIsNotUnique
+						| ExceptionPluginDisabled e)
 				{
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+
 				frame.setSize(800, 600);
 				frame.setLocationByPlatform(true);
 				frame.setVisible(true);

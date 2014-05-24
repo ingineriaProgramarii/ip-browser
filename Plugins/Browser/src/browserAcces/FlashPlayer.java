@@ -1,8 +1,12 @@
 package browserAcces;
 
-import javax.swing.JComponent;
+import java.awt.BorderLayout;
 
-import chrriis.dj.nativeswing.swtimpl.components.JFlashPlayer;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+
+import chrriis.dj.nativeswing.swtimpl.NativeInterface;
+import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
 
 /**
  * clasa pt controlul unei instante flashPlayer
@@ -10,7 +14,8 @@ import chrriis.dj.nativeswing.swtimpl.components.JFlashPlayer;
  */
 public class FlashPlayer extends PluginBase
 {
-	private JFlashPlayer flashPlayer;
+	private JWebBrowser player;
+	private JPanel jComponent;
 	
 	/**
 	 * constructor pt clasa flashPlayer
@@ -20,13 +25,19 @@ public class FlashPlayer extends PluginBase
 	 */
 	public FlashPlayer(String id, PluginManager creator) throws ExceptionInInitializerError, ExceptionIdIsNotUnique
 	{
+		NativeInterface.open();
+		
 		if(creator != null)
 		{
 			if(creator.idIsUnique(id))
 			{		
 				instanceId = id;
 		
-				flashPlayer = new JFlashPlayer();
+				jComponent = new JPanel(new BorderLayout());
+				player = new JWebBrowser();
+				
+				jComponent.add(player, BorderLayout.CENTER);
+				player.setBarsVisible(false);
 			}
 			else
 			{
@@ -46,12 +57,16 @@ public class FlashPlayer extends PluginBase
 	@Override
 	public JComponent getSwingComponent()
 	{
-		if(flashPlayer == null)
+		if(player == null)
 		{
-			flashPlayer = new JFlashPlayer();
+			jComponent = new JPanel(new BorderLayout());
+			player = new JWebBrowser();
+			
+			jComponent.add(player, BorderLayout.CENTER);
+			player.setBarsVisible(false);
 		}
 		
-		return flashPlayer;
+		return jComponent;
 	}
 	
 	/**
@@ -60,7 +75,7 @@ public class FlashPlayer extends PluginBase
 	@Override
 	public void loadContent(String path)
 	{
-		flashPlayer.load(path);
+		player.navigate(path);
 	}
 	
 	/**
@@ -73,14 +88,21 @@ public class FlashPlayer extends PluginBase
 		return super.instanceId;
 	}
 	
+	public String getAdressTitle()
+	{
+		return player.getPageTitle();
+	}
+	
 	/**
 	 * callback din pluginManager la apelarea 'clearFlashPlayerRefferences'
 	 */
 	@Override
 	public void onDestroy()
 	{
-		flashPlayer.stop();
+		player.stopLoading();
 		
 		super.interrupt();
+		
+		NativeInterface.close();
 	}
 }
